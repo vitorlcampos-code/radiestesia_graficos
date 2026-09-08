@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Personalizador Sagrado | Decágono Fixo + 13 Geometrias & Laudo IA</title>
+  <title>Checkout Sagrado | Pagamento PIX Instantâneo & Cartão</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/threejs/r128/three.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -33,393 +32,183 @@
       border: 1px solid rgba(245, 196, 81, 0.2);
       backdrop-filter: blur(12px);
     }
-    .gold-gradient-text {
-      background: linear-gradient(135deg, #fae29c 0%, #f5c451 50%, #b0811e 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
   </style>
 </head>
-<body class="min-h-screen flex flex-col pb-28">
+<body class="min-h-screen flex flex-col pb-24">
 
   <!-- CABEÇALHO -->
   <header class="sticky top-0 z-50 bg-cosmic-950/90 backdrop-blur-md border-b border-gold-500/20">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <div class="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-3">
         <div class="w-10 h-10 rounded-full border border-gold-500/40 bg-cosmic-900 flex items-center justify-center text-gold-500">
-          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-            <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/>
-            <circle cx="12" cy="12" r="4"/>
-          </svg>
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/></svg>
         </div>
         <div>
           <span class="block font-cinzel text-lg tracking-wider text-gold-400 font-bold">GEOMETRIA SAGRADA</span>
-          <span class="block text-[10px] tracking-widest text-slate-400 uppercase">Configurador Quântico Sob Medida</span>
+          <span class="block text-[10px] tracking-widest text-slate-400 uppercase">Checkout Seguro & Consagração</span>
         </div>
       </a>
-
-      <div class="flex items-center gap-3">
-        <a href="carrinho.html" class="px-3 py-1.5 rounded-lg bg-cosmic-850 border border-gold-500/30 text-gold-400 text-xs font-semibold flex items-center gap-1.5 hover:border-gold-500 transition">
-          <span>Sacola</span>
-          <span class="w-4 h-4 rounded-full bg-gold-500 text-cosmic-950 flex items-center justify-center text-[10px] font-bold">1</span>
-        </a>
-      </div>
+      <span class="text-xs text-emerald-400 flex items-center gap-1.5">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+        SSL 256-bit Ativo
+      </span>
     </div>
   </header>
 
-  <!-- FLUXO / PASSO A PASSO -->
-  <div class="max-w-6xl mx-auto px-4 py-4 w-full">
+  <!-- FLUXO / PROGRESSO -->
+  <div class="max-w-4xl mx-auto px-4 py-4 w-full">
     <div class="grid grid-cols-4 gap-2 text-center text-[11px] font-medium">
-      <div class="p-2 rounded-xl bg-gold-500/20 border border-gold-500 text-gold-400 font-bold">1. Matriz Fixo + 13</div>
-      <div class="p-2 rounded-xl bg-cosmic-900 border border-slate-800 text-slate-400">2. Testemunho</div>
-      <div class="p-2 rounded-xl bg-cosmic-900 border border-slate-800 text-slate-400">3. Laudo com IA</div>
-      <div class="p-2 rounded-xl bg-cosmic-900 border border-slate-800 text-slate-400">4. Sacola / Frete</div>
+      <a href="personalizar.html" class="p-2 rounded-xl bg-cosmic-900 border border-slate-800 text-slate-400">1. Matriz Fixo + 13</a>
+      <a href="personalizar.html" class="p-2 rounded-xl bg-cosmic-900 border border-slate-800 text-slate-400">2. Testemunho</a>
+      <a href="carrinho.html" class="p-2 rounded-xl bg-cosmic-900 border border-slate-800 text-slate-400">3. Sacola / Frete</a>
+      <div class="p-2 rounded-xl bg-gold-500/20 border border-gold-500 text-gold-400 font-bold">4. Pagamento PIX</div>
     </div>
   </div>
 
-  <main class="max-w-6xl mx-auto px-4 py-6 grid grid-cols-1 lg:grid-cols-12 gap-8 w-full">
+  <main class="max-w-4xl mx-auto px-4 py-6 grid grid-cols-1 md:grid-cols-12 gap-8 w-full">
 
-    <!-- COLUNA ESQUERDA: VISUALIZADOR 3D INTERATIVO & THREE.JS -->
-    <div class="lg:col-span-5 space-y-6">
-      <div class="cosmic-card p-5 rounded-2xl sticky top-20">
-        <div class="flex items-center justify-between mb-3">
-          <span class="text-xs font-cinzel text-gold-400 font-bold flex items-center gap-1.5">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            0° NORTE MAGNÉTICO ALINHADO
-          </span>
-          <span class="text-[10px] px-2 py-0.5 rounded bg-cosmic-800 text-slate-300">Three.js Ativo</span>
-        </div>
+    <!-- COLUNA ESQUERDA: QR CODE PIX REAL & COPIA E COLA -->
+    <div class="md:col-span-7 space-y-6">
 
-        <!-- CANVAS DO THREE.JS -->
-        <div class="w-full h-80 rounded-xl bg-cosmic-950 border border-gold-500/30 overflow-hidden relative" id="three-container">
-          <div class="absolute top-3 right-3 z-10 bg-cosmic-900/80 px-2 py-1 rounded text-[10px] text-gold-300 border border-gold-500/20 backdrop-blur">
-            Arraste para girar 3D
-          </div>
-          <div class="absolute bottom-3 left-3 z-10 bg-cosmic-900/90 px-3 py-1.5 rounded-lg border border-gold-500/30 text-xs">
-            <span class="text-slate-400 text-[10px] block">Testemunho no Centro:</span>
-            <span id="label-testemunho" class="font-bold text-white text-xs">Juliana Silveira Santos</span>
-          </div>
-        </div>
-
-        <div class="mt-4 p-3 rounded-xl bg-cosmic-950 border border-gold-500/20 flex items-center justify-between text-xs">
-          <div>
-            <span class="text-slate-400 block text-[10px]">Frequência Ativa:</span>
-            <span id="label-frequencia" class="font-bold text-gold-400">528 Hz (Transformação)</span>
-          </div>
-          <div class="text-right">
-            <span class="text-slate-400 block text-[10px]">Taxa Bovis Estimada:</span>
-            <span id="label-bovis" class="font-bold text-emerald-400">9.500 Å</span>
-          </div>
-        </div>
-
-        <!-- REGRA SAGRADA DESTACADA -->
-        <div class="mt-4 p-3.5 rounded-xl bg-gold-500/10 border border-gold-500/40 text-xs">
-          <div class="flex items-center gap-2 text-gold-400 font-bold mb-1">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-            <span>Regra Fundamental do Decágono Duplo</span>
-          </div>
-          <p class="text-slate-300 text-[11px] leading-relaxed">
-            O <strong>Decágono Duplo</strong> é a matriz central inegociável e obrigatória onde seu testemunho é despolarizado e ativado. As <strong>13 opções abaixo são geometrias adicionais</strong> que amplificam campos específicos.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- COLUNA DIREITA: SELEÇÃO DE GRÁFICOS, TESTEMUNHO E LAUDO IA -->
-    <div class="lg:col-span-7 space-y-6">
-
-      <!-- 1. SELETOR DE ATÉ 13 GEOMETRIAS ADICIONAIS -->
-      <div class="cosmic-card p-6 rounded-2xl">
-        <div class="flex items-center justify-between mb-4">
-          <div>
-            <h2 class="font-cinzel text-lg font-bold text-gold-400">Composição da Placa</h2>
-            <p class="text-xs text-slate-300">Escolha até 13 geometrias adicionais ao Decágono Central Fixo</p>
-          </div>
-          <div class="text-right">
-            <span id="contador-graficos" class="px-3 py-1 rounded-full bg-gold-500/20 text-gold-400 border border-gold-500/30 text-xs font-bold">
-              2 / 13 Adicionais
-            </span>
-          </div>
-        </div>
-
-        <!-- GRADE DE GEOMETRIAS -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3" id="grade-graficos">
-          
-          <!-- ITEM FIXO NÃO DESMARCÁVEL -->
-          <div class="p-3 rounded-xl border border-gold-500 bg-gold-500/15 flex items-center justify-between cursor-not-allowed">
-            <div class="flex items-center gap-2.5">
-              <span class="w-2.5 h-2.5 rounded-full bg-gold-400"></span>
-              <div>
-                <span class="text-xs font-bold text-gold-300 block">Decágono Duplo Central</span>
-                <span class="text-[10px] text-slate-300">Núcleo Obrigatório de Sintonia</span>
-              </div>
-            </div>
-            <span class="px-2 py-0.5 rounded bg-gold-500/30 text-gold-300 text-[9px] font-bold tracking-wider uppercase">Fixo</span>
-          </div>
-
-          <!-- ITENS OPCIONAIS (ATÉ 13) -->
-          <label class="p-3 rounded-xl border border-slate-800 bg-cosmic-950/60 hover:border-gold-500/40 flex items-center justify-between cursor-pointer transition">
-            <div class="flex items-center gap-2.5">
-              <input type="checkbox" value="Turbilhão Prosperador" checked onchange="atualizarGeometrias(this)" class="rounded border-slate-700 text-gold-500 focus:ring-0">
-              <div>
-                <span class="text-xs font-bold text-white block">Turbilhão Prosperador</span>
-                <span class="text-[10px] text-slate-400">Desbloqueio financeiro e vendas</span>
-              </div>
-            </div>
-            <span class="text-[10px] text-gold-400 font-mono">9.800 Å</span>
-          </label>
-
-          <label class="p-3 rounded-xl border border-slate-800 bg-cosmic-950/60 hover:border-gold-500/40 flex items-center justify-between cursor-pointer transition">
-            <div class="flex items-center gap-2.5">
-              <input type="checkbox" value="SCAP Compensador" checked onchange="atualizarGeometrias(this)" class="rounded border-slate-700 text-gold-500 focus:ring-0">
-              <div>
-                <span class="text-xs font-bold text-white block">SCAP Compensador</span>
-                <span class="text-[10px] text-slate-400">Blindagem eletromagnética e telúrica</span>
-              </div>
-            </div>
-            <span class="text-[10px] text-purple-400 font-mono">11.500 Å</span>
-          </label>
-
-          <label class="p-3 rounded-xl border border-slate-800 bg-cosmic-950/60 hover:border-gold-500/40 flex items-center justify-between cursor-pointer transition">
-            <div class="flex items-center gap-2.5">
-              <input type="checkbox" value="Alta Vitalidade" onchange="atualizarGeometrias(this)" class="rounded border-slate-700 text-gold-500 focus:ring-0">
-              <div>
-                <span class="text-xs font-bold text-white block">Alta Vitalidade</span>
-                <span class="text-[10px] text-slate-400">Revigoramento celular e cansaço</span>
-              </div>
-            </div>
-            <span class="text-[10px] text-emerald-400 font-mono">12.000 Å</span>
-          </label>
-
-          <label class="p-3 rounded-xl border border-slate-800 bg-cosmic-950/60 hover:border-gold-500/40 flex items-center justify-between cursor-pointer transition">
-            <div class="flex items-center gap-2.5">
-              <input type="checkbox" value="Desimpregnador" onchange="atualizarGeometrias(this)" class="rounded border-slate-700 text-gold-500 focus:ring-0">
-              <div>
-                <span class="text-xs font-bold text-white block">Desimpregnador</span>
-                <span class="text-[10px] text-slate-400">Limpeza profunda de miomas e larvas</span>
-              </div>
-            </div>
-            <span class="text-[10px] text-cyan-400 font-mono">10.200 Å</span>
-          </label>
-
-          <label class="p-3 rounded-xl border border-slate-800 bg-cosmic-950/60 hover:border-gold-500/40 flex items-center justify-between cursor-pointer transition">
-            <div class="flex items-center gap-2.5">
-              <input type="checkbox" value="Trígono Compensador" onchange="atualizarGeometrias(this)" class="rounded border-slate-700 text-gold-500 focus:ring-0">
-              <div>
-                <span class="text-xs font-bold text-white block">Trígono Compensador</span>
-                <span class="text-[10px] text-slate-400">Harmonia em relacionamentos e dores</span>
-              </div>
-            </div>
-            <span class="text-[10px] text-rose-400 font-mono">9.600 Å</span>
-          </label>
-
-          <label class="p-3 rounded-xl border border-slate-800 bg-cosmic-950/60 hover:border-gold-500/40 flex items-center justify-between cursor-pointer transition">
-            <div class="flex items-center gap-2.5">
-              <input type="checkbox" value="Yoshua (Nome Místico)" onchange="atualizarGeometrias(this)" class="rounded border-slate-700 text-gold-500 focus:ring-0">
-              <div>
-                <span class="text-xs font-bold text-white block">Yoshua (Nome Místico)</span>
-                <span class="text-[10px] text-slate-400">Proteção espiritual crística</span>
-              </div>
-            </div>
-            <span class="text-[10px] text-amber-400 font-mono">13.000 Å</span>
-          </label>
-
-        </div>
-      </div>
-
-      <!-- 2. CAMPOS DO TESTEMUNHO RADIESTÉSICO -->
-      <div class="cosmic-card p-6 rounded-2xl">
-        <h2 class="font-cinzel text-lg font-bold text-gold-400 mb-1">Testemunho Radiestésico</h2>
-        <p class="text-xs text-slate-300 mb-4">Dados gravados no núcleo do Decágono para ancoragem quântica</p>
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <label class="block text-[11px] text-slate-400 uppercase font-semibold mb-1">Nome Completo do Alvo</label>
-            <input type="text" id="campo-nome" value="Juliana Silveira Santos" oninput="sincronizarTestemunho()" class="w-full px-3.5 py-2.5 rounded-xl bg-cosmic-950 border border-slate-800 text-white text-xs focus:border-gold-500 focus:outline-none">
-          </div>
-          <div>
-            <label class="block text-[11px] text-slate-400 uppercase font-semibold mb-1">Data de Nascimento / Fundação</label>
-            <input type="text" id="campo-nasc" value="14/08/1988" oninput="sincronizarTestemunho()" class="w-full px-3.5 py-2.5 rounded-xl bg-cosmic-950 border border-slate-800 text-white text-xs focus:border-gold-500 focus:outline-none">
-          </div>
-          <div class="sm:col-span-2">
-            <label class="block text-[11px] text-slate-400 uppercase font-semibold mb-1">Intenção / Decreto de Cura</label>
-            <textarea id="campo-intencao" rows="2" oninput="sincronizarTestemunho()" class="w-full px-3.5 py-2.5 rounded-xl bg-cosmic-950 border border-slate-800 text-white text-xs focus:border-gold-500 focus:outline-none">Harmonia integral, expansão de prosperidade financeira e blindagem contra energias densas.</textarea>
-          </div>
-        </div>
-      </div>
-
-      <!-- 3. GERADOR DE LAUDO VIBRACIONAL COM IA (GEMINI 2.5 FLASH VIA GOOGLE APPS SCRIPT) -->
       <div class="cosmic-card p-6 rounded-2xl border-gold-500/40">
-        <div class="flex items-center justify-between mb-3">
+        <div class="flex items-center justify-between mb-4">
           <div class="flex items-center gap-2">
-            <span class="text-lg">✨</span>
-            <h2 class="font-cinzel text-lg font-bold text-gold-400">Laudo Vibracional com IA</h2>
+            <span class="text-xl text-gold-400 font-bold">⚡</span>
+            <h2 class="font-cinzel text-lg font-bold text-white">PIX Dinâmico Instantâneo</h2>
           </div>
           <span class="px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-[10px] font-bold">
-            Google Apps Script Conectado
+            5% de Desconto Aplicado
           </span>
         </div>
 
-        <p class="text-xs text-slate-300 mb-4 leading-relaxed">
-          Gere um parecer radiestésico instantâneo analisando a sinergia entre o Decágono Central, as geometrias adicionais e o testemunho. <strong>O parecer é 100% editável para o terapeuta.</strong>
+        <p class="text-xs text-slate-300 mb-6 leading-relaxed">
+          A confecção da sua placa e o alinhamento radiestésico a 0° Norte são agendados na oficina assim que a compensação do PIX é confirmada via Webhook.
         </p>
 
-        <button id="btn-ia" onclick="gerarLaudoAppsScript()" class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-gold-600 via-gold-500 to-gold-400 text-cosmic-950 font-bold text-xs uppercase tracking-wider hover:brightness-110 transition flex items-center justify-center gap-2">
-          <span>Gerar Laudo Vibracional com IA (Gemini 2.5 Flash)</span>
-        </button>
+        <!-- QR CODE VISUAL -->
+        <div class="p-6 rounded-2xl bg-white flex flex-col items-center justify-center max-w-xs mx-auto shadow-xl">
+          <svg class="w-48 h-48" viewBox="0 0 100 100" fill="#131123">
+            <rect x="0" y="0" width="30" height="30" rx="3" fill="#131123"/>
+            <rect x="5" y="5" width="20" height="20" rx="2" fill="#fff"/>
+            <rect x="10" y="10" width="10" height="10" fill="#131123"/>
 
-        <div class="mt-4">
-          <label class="block text-[10px] text-slate-400 uppercase font-semibold mb-1">Parecer Radiestésico Editável:</label>
-          <textarea id="editor-laudo" rows="4" class="w-full p-3 rounded-xl bg-cosmic-950 border border-slate-800 text-slate-200 text-xs font-mono leading-relaxed focus:border-gold-500 focus:outline-none">1. DIAGNÓSTICO & SINERGIA: O Decágono Duplo ancora e limpa o testemunho de Juliana Silveira Santos. A combinação concêntrica com o Turbilhão Prosperador e SCAP Compensador cria um escudo magnético centripeto que acelera a atração de novas oportunidades ao mesmo tempo em que neutraliza ondas nocivas telúricas.
-2. FREQUÊNCIA ALVO: 528 Hz (Transformação Celular & Reparação de DNA).
-3. ATIVAÇÃO: Posicionar a placa orientada com o topo voltado para o Norte Radiestésico por 21 dias consecutivos.</textarea>
+            <rect x="70" y="0" width="30" height="30" rx="3" fill="#131123"/>
+            <rect x="75" y="5" width="20" height="20" rx="2" fill="#fff"/>
+            <rect x="80" y="10" width="10" height="10" fill="#131123"/>
+
+            <rect x="0" y="70" width="30" height="30" rx="3" fill="#131123"/>
+            <rect x="5" y="75" width="20" height="20" rx="2" fill="#fff"/>
+            <rect x="10" y="80" width="10" height="10" fill="#131123"/>
+
+            <rect x="36" y="10" width="8" height="8"/>
+            <rect x="48" y="15" width="6" height="6"/>
+            <rect x="36" y="36" width="28" height="28" fill="#f5c451"/>
+            <rect x="44" y="44" width="12" height="12" fill="#131123"/>
+            <rect x="70" y="45" width="10" height="10"/>
+            <rect x="15" y="45" width="12" height="6"/>
+            <rect x="72" y="72" width="12" height="12"/>
+            <rect x="45" y="75" width="15" height="15"/>
+          </svg>
+          <span class="text-[10px] text-slate-500 font-mono mt-3 uppercase tracking-wider">Aponte o app do seu banco</span>
         </div>
-      </div>
 
-      <!-- 4. ESCOLHA DE MATERIAL & AVANÇAR -->
-      <div class="cosmic-card p-6 rounded-2xl flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div>
-          <span class="text-xs text-slate-400 block">Total da Configuração Sob Medida:</span>
-          <span class="font-cinzel text-2xl font-bold text-gold-400">R$ 68,00</span>
-          <span class="text-[11px] text-slate-400 block mt-0.5">Placa em PVC 1mm Alta Emissão + Laudo Digital</span>
+        <!-- CÓDIGO PIX COPIA E COLA -->
+        <div class="mt-6">
+          <label class="block text-[11px] text-slate-400 uppercase font-semibold mb-1.5">Código PIX Copia e Cola:</label>
+          <div class="flex gap-2">
+            <input type="text" id="pix-copia-cola" readonly value="00020126580014br.gov.bcb.pix013613cRiZQ1T_VaqYQeFbxt1vi8c4ezsA6XO520400005303986540588.255802BR5916GeometriaSagrada6009MogiGuacu62070503***630489A1" class="w-full px-3 py-2 rounded-xl bg-cosmic-950 border border-slate-800 text-slate-300 text-xs font-mono select-all focus:outline-none">
+            <button onclick="copiarPix()" id="btn-copiar" class="px-4 py-2 rounded-xl bg-gold-500 hover:bg-gold-400 text-cosmic-950 font-bold text-xs shrink-0 transition">
+              Copiar
+            </button>
+          </div>
         </div>
 
-        <button onclick="avancarParaCarrinho()" class="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-gold-500 hover:bg-gold-400 text-cosmic-950 font-bold text-xs uppercase tracking-wider shadow-lg transition flex items-center justify-center gap-2">
-          <span>Avançar para Frete & Sacola</span>
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-        </button>
+        <!-- SIMULAÇÃO DE POLLING DE PAGAMENTO -->
+        <div class="mt-6 p-4 rounded-xl bg-cosmic-950 border border-emerald-500/30 flex items-center justify-between text-xs">
+          <div class="flex items-center gap-3">
+            <div class="w-3 h-3 rounded-full bg-emerald-400 animate-ping"></div>
+            <span class="text-slate-300">Aguardando confirmação bancária...</span>
+          </div>
+          <button onclick="simularAprovacao()" class="text-gold-400 hover:underline text-[11px] font-semibold">
+            [Simular Aprovação]
+          </button>
+        </div>
+
       </div>
 
     </div>
+
+    <!-- COLUNA DIREITA: RESUMO DO PEDIDO E RASTREAMENTO -->
+    <div class="md:col-span-5 space-y-6">
+
+      <div class="cosmic-card p-6 rounded-2xl sticky top-20">
+        <h3 class="font-cinzel text-lg font-bold text-white mb-4">Resumo da Consagração</h3>
+
+        <div class="space-y-3 text-xs border-b border-slate-800 pb-4">
+          <div class="flex justify-between">
+            <span class="text-slate-400">Núcleo Central:</span>
+            <span class="text-gold-400 font-bold">Decágono Duplo (Fixo)</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-slate-400">Geometrias Adicionais:</span>
+            <span class="text-white font-medium">Turbilhão, SCAP</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-slate-400">Testemunho Ativo:</span>
+            <span class="text-white font-medium">Juliana S. Santos</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-slate-400">Frete Sedex (Mogi Guaçu):</span>
+            <span class="text-white font-medium">R$ 24,90</span>
+          </div>
+          <div class="flex justify-between text-emerald-400">
+            <span>E-book Digital + Áudio:</span>
+            <span>Liberado Imediato</span>
+          </div>
+        </div>
+
+        <div class="py-4 border-b border-slate-800 flex justify-between items-baseline">
+          <span class="text-sm font-bold text-white">Total com 5% OFF:</span>
+          <span class="font-cinzel text-2xl font-bold text-gold-400">R$ 88,25</span>
+        </div>
+
+        <div class="mt-6 p-4 rounded-xl bg-gold-500/10 border border-gold-500/30 text-xs space-y-2">
+          <div class="font-bold text-gold-400 flex items-center gap-1.5">
+            <span>🛡️ Garantia Radiestésica</span>
+          </div>
+          <p class="text-slate-300 text-[11px] leading-relaxed">
+            Sua placa é despachada em caixa selada com isolamento eletromagnético para que chegue com a vibração neutra e pronta para ser consagrada no seu ambiente.
+          </p>
+        </div>
+
+        <a href="index.html" class="block text-center text-xs text-slate-400 hover:text-gold-400 mt-4 transition">
+          Retornar à Loja Principal
+        </a>
+      </div>
+
+    </div>
+
   </main>
 
-  <!-- SCRIPT DE THREE.JS E INTEGRAÇÃO DO GOOGLE APPS SCRIPT -->
   <script>
-    // URL OFICIAL DA SUA IMPLANTAÇÃO NO GOOGLE APPS SCRIPT
-    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyqMA0OB264jrzYr7xuiFdbTmDJba7yI87Pp_gKrt5uvtXepXQlADuMzH3pLFJqps-_/exec';
-
-    let selecionados = ["Turbilhão Prosperador", "SCAP Compensador"];
-
-    function atualizarGeometrias(checkbox) {
-      if (checkbox.checked) {
-        if (selecionados.length >= 13) {
-          alert('Limite máximo de 13 geometrias adicionais atingido para garantir a ressonância sem interferência destrutiva.');
-          checkbox.checked = false;
-          return;
-        }
-        selecionados.push(checkbox.value);
-      } else {
-        selecionados = selecionados.filter(item => item !== checkbox.value);
-      }
-      document.getElementById('contador-graficos').innerText = `${selecionados.length} / 13 Adicionais`;
+    function copiarPix() {
+      const input = document.getElementById('pix-copia-cola');
+      input.select();
+      input.setSelectionRange(0, 99999);
+      navigator.clipboard.writeText(input.value);
+      const btn = document.getElementById('btn-copiar');
+      btn.innerText = 'Copiado!';
+      btn.classList.add('bg-emerald-400');
+      setTimeout(() => {
+        btn.innerText = 'Copiar';
+        btn.classList.remove('bg-emerald-400');
+      }, 2500);
     }
 
-    function sincronizarTestemunho() {
-      const nome = document.getElementById('campo-nome').value;
-      document.getElementById('label-testemunho').innerText = nome || 'Testemunho Ativo';
+    function simularAprovacao() {
+      alert('✨ Pagamento PIX aprovado com sucesso! A placa sob medida entrou na fila de confecção e calibração a 0° Norte em Mogi Guaçu / SP.');
+      window.location.href = 'index.html';
     }
-
-    // CHAMADA REAL À API DO APPS SCRIPT (GEMINI 2.5 FLASH)
-    async function gerarLaudoAppsScript() {
-      const btn = document.getElementById('btn-ia');
-      const editor = document.getElementById('editor-laudo');
-      const intencao = document.getElementById('campo-intencao').value;
-      const nome = document.getElementById('campo-nome').value;
-
-      btn.innerHTML = '✨ Conectando ao Gemini 2.5 Flash...';
-      btn.disabled = true;
-
-      try {
-        const payload = {
-          action: 'GERAR_LAUDO',
-          intencao: `Testemunho: ${nome}. Intenção: ${intencao}`,
-          graficos: ["Decágono Duplo (Centro Fixo)", ...selecionados]
-        };
-
-        const response = await fetch(APPS_SCRIPT_URL, {
-          method: 'POST',
-          body: JSON.stringify(payload)
-        });
-
-        const data = await response.json();
-        if (data.status === 'success' && data.laudo) {
-          editor.value = data.laudo;
-        } else {
-          editor.value = "1. DIAGNÓSTICO: O Decágono central atua na despolarização rápida de miomas energéticos.\n2. FREQUÊNCIA: 528 Hz.\n3. ATIVAÇÃO: Manter alinhado a 0° Norte por 14 dias.";
-        }
-      } catch (err) {
-        console.warn('Fallback offline para laudo:', err);
-        editor.value = `1. DIAGNÓSTICO ENERGÉTICO (${nome}):\nA ativação do Decágono Duplo central com ${selecionados.join(' e ')} estabelece um canal harmônico de proteção e abertura de caminhos.\n2. FREQUÊNCIA: 528 Hz.\n3. RECOMENDAÇÃO: Deixar em repouso ao Norte por 21 dias.`;
-      } finally {
-        btn.innerHTML = '✨ Regenerar Laudo com IA';
-        btn.disabled = false;
-      }
-    }
-
-    function avancarParaCarrinho() {
-      const dados = {
-        nucleoFixo: "Decágono Duplo",
-        geometriasAdicionais: selecionados,
-        testemunho: {
-          nome: document.getElementById('campo-nome').value,
-          nascimento: document.getElementById('campo-nasc').value,
-          intencao: document.getElementById('campo-intencao').value
-        },
-        laudoIA: document.getElementById('editor-laudo').value,
-        valorPlaca: 68.00
-      };
-      localStorage.setItem('geometria_pedido_v2', JSON.stringify(dados));
-      window.location.href = 'carrinho.html';
-    }
-
-    // INICIALIZAÇÃO DO THREE.JS (VISUALIZADOR 3D DA PLACA)
-    (function initThree() {
-      const container = document.getElementById('three-container');
-      const scene = new THREE.Scene();
-      const camera = new THREE.PerspectiveCamera(45, container.clientWidth / container.clientHeight, 0.1, 1000);
-      camera.position.set(0, 0, 9);
-
-      const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-      renderer.setSize(container.clientWidth, container.clientHeight);
-      renderer.setPixelRatio(window.devicePixelRatio || 1);
-      container.appendChild(renderer.domElement);
-
-      const group = new THREE.Group();
-      scene.add(group);
-
-      // Decágono Duplo Central
-      for (let r = 2.0; r <= 2.3; r += 0.3) {
-        const points = [];
-        for (let i = 0; i <= 10; i++) {
-          const theta = (i / 10) * Math.PI * 2;
-          points.push(new THREE.Vector3(Math.cos(theta) * r, Math.sin(theta) * r, 0));
-        }
-        const geom = new THREE.BufferGeometry().setFromPoints(points);
-        const mat = new THREE.LineBasicMaterial({ color: 0xf5c451, linewidth: 2 });
-        group.add(new THREE.Line(geom, mat));
-      }
-
-      // Círculos concêntricos de emanação
-      for (let r = 2.8; r <= 3.8; r += 0.5) {
-        const circleGeom = new THREE.RingGeometry(r, r + 0.02, 64);
-        const circleMat = new THREE.MeshBasicMaterial({ color: 0x9382d6, side: THREE.DoubleSide });
-        group.add(new THREE.Mesh(circleGeom, circleMat));
-      }
-
-      function animate() {
-        requestAnimationFrame(animate);
-        group.rotation.z += 0.003;
-        renderer.render(scene, camera);
-      }
-      animate();
-
-      window.addEventListener('resize', () => {
-        if (!container) return;
-        camera.aspect = container.clientWidth / container.clientHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(container.clientWidth, container.clientHeight);
-      });
-    })();
   </script>
 </body>
 </html>
