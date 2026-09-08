@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Geometria Sagrada & Radiestesia | Placas e Gráficos Vibracionais Sob Medida</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              300: '#fae29c',
+              400: '#f7d370',
+              500: '#f5c451',
+              600: '#d9a632',
+              700: '#b0811e'
+            },
+            cosmic: {
+              950: '#0a0815',
+              900: '#131123',
+              850: '#1a172e',
+              800: '#231f3d',
+              700: '#342e59',
+              600: '#483f7a'
+            }
+          },
+          fontFamily: {
+            cinzel: ['Cinzel', 'serif'],
+            playfair: ['Playfair Display', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #0d0b1a;
+      color: #e5e3f1;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #fae29c 0%, #f5c451 50%, #b0811e 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .cosmic-card {
+      background: linear-gradient(180deg, rgba(26, 23, 46, 0.85) 0%, rgba(19, 17, 35, 0.95) 100%);
+      border: 1px solid rgba(245, 196, 81, 0.18);
+      backdrop-filter: blur(12px);
+    }
+    .cosmic-card:hover {
+      border-color: rgba(245, 196, 81, 0.45);
+      box-shadow: 0 10px 30px -10px rgba(245, 196, 81, 0.15);
+    }
+    .glow-gold {
+      box-shadow: 0 0 25px rgba(245, 196, 81, 0.25);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col pb-24">
+
+  <!-- TOPO / CABEÇALHO -->
+  <header class="sticky top-0 z-50 bg-cosmic-950/90 backdrop-blur-md border-b border-gold-500/20">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-full border border-gold-500/40 bg-cosmic-900 flex items-center justify-center text-gold-500 glow-gold transition group-hover:scale-105">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+            <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/>
+            <circle cx="12" cy="12" r="4"/>
+          </svg>
+        </div>
+        <div>
+          <span class="block font-cinzel text-lg tracking-wider text-gold-400 font-bold">GEOMETRIA SAGRADA</span>
+          <span class="block text-[10px] tracking-widest text-slate-400 uppercase">Gráficos Radiestésicos & Ondas de Forma</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="index.html" class="text-gold-400 border-b border-gold-400 pb-0.5">Início</a>
+        <a href="#iniciantes" class="text-slate-300 hover:text-gold-400 transition">Para Iniciantes</a>
+        <a href="#catalogo" class="text-slate-300 hover:text-gold-400 transition">Placas Populares</a>
+        <a href="#ebook" class="text-slate-300 hover:text-gold-400 transition">E-book Prático</a>
+        <a href="personalizar.html" class="text-slate-300 hover:text-gold-400 transition">Personalizador 13 Gráficos</a>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="carrinho.html" class="relative p-2 rounded-xl bg-cosmic-850 border border-gold-500/30 text-gold-400 hover:border-gold-500 transition">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+          </svg>
+          <span id="badge-carrinho" class="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-gold-500 text-cosmic-950 text-xs font-bold flex items-center justify-center">1</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO PRINCIPAL (ACOLHEDOR PARA LEIGOS & POTENTE PARA TERAPEUTAS) -->
+  <section class="relative overflow-hidden py-14 md:py-20 px-4">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(245,196,81,0.09),transparent_65%)] pointer-events-none"></div>
+
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gold-500/10 border border-gold-500/30 text-gold-400 text-xs font-medium tracking-wide mb-6">
+        <span class="w-2 h-2 rounded-full bg-gold-400 animate-ping"></span>
+        Calibragem Autêntica a 0° Norte Magnético • Mogi Guaçu / SP
+      </div>
+
+      <h1 class="font-playfair text-3xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
+        A Ciência das Ondas de Forma para
+        <span class="gold-gradient-text block font-cinzel">Prosperidade, Cura & Proteção</span>
+      </h1>
+
+      <p class="text-slate-300 text-base sm:text-lg max-w-2xl mx-auto mb-8 font-light leading-relaxed">
+        Seja você um consulente em busca de harmonia no lar ou um terapeuta radiestesista experiente: crie placas personalizadas com o <strong>Decágono Duplo</strong> central e até <strong>13 geometrias adicionais</strong>, com emissão precisa em PVC de alta condutividade.
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="personalizar.html" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-gradient-to-r from-gold-600 via-gold-500 to-gold-400 text-cosmic-950 font-bold text-sm uppercase tracking-wider shadow-lg hover:brightness-110 transition flex items-center justify-center gap-2">
+          <span>Configurar Placa Sob Medida</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+
+        <a href="#ebook" class="w-full sm:w-auto px-7 py-4 rounded-xl bg-cosmic-850 border border-gold-500/40 text-gold-400 font-semibold text-sm hover:bg-cosmic-800 transition flex items-center justify-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          <span>E-book para Leigos (Guia Prático)</span>
+        </a>
+      </div>
+
+      <!-- BANNER DE BÔNUS DO E-BOOK -->
+      <div class="mt-8 p-3.5 rounded-xl bg-gold-500/10 border border-gold-500/30 max-w-xl mx-auto flex items-center justify-center gap-2 text-xs text-gold-300 shadow-md">
+        <span class="text-base">🎁</span>
+        <span><strong>Super Bônus:</strong> Encomende qualquer Placa Física (PVC ou Cobre) e receba o <strong>E-book Completo + Audioguia Oficial</strong> gratuitamente!</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO OS 3 FORMATOS DE CONDUÇÃO -->
+  <section id="formatos" class="max-w-6xl mx-auto px-4 py-12">
+    <div class="text-center max-w-2xl mx-auto mb-10">
+      <span class="text-gold-500 text-xs font-semibold tracking-widest uppercase">Escolha a Modalidade Ideal</span>
+      <h2 class="font-cinzel text-2xl sm:text-3xl font-bold text-white mt-1">Três Formatos de Alta Precisão</h2>
+      <p class="text-slate-300 text-sm mt-2">Desde a praticidade do download imediato até o padrão ouro em fenolite de cobre maciço.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- FORMATO 1: DIGITAL -->
+      <div class="cosmic-card p-6 rounded-2xl flex flex-col justify-between border-slate-800 hover:border-gold-500/40">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-cosmic-800 text-gold-400 flex items-center justify-center text-xl mb-4">
+            💾
+          </div>
+          <h3 class="font-playfair text-xl font-bold text-white mb-2">Formato Digital (PDF Vetorial)</h3>
+          <p class="text-slate-300 text-xs leading-relaxed mb-4">
+            Arquivo digital em ultra-alta resolução (300+ DPI), rigorosamente calibrado em proporção áurea Phi para você imprimir em gráfica expressa ou em casa.
+          </p>
+          <ul class="text-[11px] text-slate-400 space-y-1.5 mb-6">
+            <li>✓ Entrega instantânea na tela pós-PIX</li>
+            <li>✓ Custo de frete zero</li>
+            <li>✓ Guia de ativação e consagração em PDF</li>
+          </ul>
+        </div>
+        <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+          <div>
+            <span class="text-[10px] text-slate-400 block">A partir de</span>
+            <span class="font-cinzel text-xl font-bold text-gold-400">R$ 39,00</span>
+          </div>
+          <button onclick="adicionarAoCarrinhoComFormato('Matriz Radiestésica Digital (PDF)', 39.00, 'Arquivo Digital Vetorial (PDF)', 0)" class="px-4 py-2 rounded-lg bg-cosmic-800 hover:bg-cosmic-700 text-gold-300 border border-gold-500/40 text-xs font-bold transition">
+            Escolher Digital
+          </button>
+        </div>
+      </div>
+
+      <!-- FORMATO 2: IMPRESSO PVC 1MM (POPULAR) -->
+      <div class="cosmic-card p-6 rounded-2xl flex flex-col justify-between border-gold-500/60 bg-gradient-to-b from-cosmic-850 to-cosmic-900 relative">
+        <span class="absolute -top-3 right-6 px-2.5 py-0.5 rounded-full bg-gold-500 text-cosmic-950 text-[10px] font-bold uppercase tracking-wider">Mais Escolhido</span>
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-gold-500/20 text-gold-400 flex items-center justify-center text-xl mb-4">
+            🛡️
+          </div>
+          <h3 class="font-playfair text-xl font-bold text-white mb-2">Placa PVC Rígido 1mm</h3>
+          <p class="text-slate-300 text-xs leading-relaxed mb-4">
+            Suporte físico de alta durabilidade com tinta condutiva para ondas de forma contínuas. Lavável, resistente e calibrada a 0° Norte na oficina de Mogi Guaçu (SP).
+          </p>
+          <ul class="text-[11px] text-slate-300 space-y-1.5 mb-6">
+            <li>✓ Envio Correios com embalagem protetora</li>
+            <li>✓ <strong>Ganha o E-book + Áudio de Bônus</strong></li>
+            <li>✓ Calibração a 0° Norte Magnético</li>
+          </ul>
+        </div>
+        <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+          <div>
+            <span class="text-[10px] text-slate-400 block">A partir de</span>
+            <span class="font-cinzel text-xl font-bold text-gold-400">R$ 68,00</span>
+          </div>
+          <button onclick="adicionarAoCarrinhoComFormato('Placa Radiestésica PVC 1mm', 68.00, 'Placa PVC 1mm Gravada', 24.90)" class="px-4 py-2 rounded-lg bg-gold-500 hover:bg-gold-400 text-cosmic-950 text-xs font-bold transition">
+            Escolher PVC
+          </button>
+        </div>
+      </div>
+
+      <!-- FORMATO 3: FOLHA DE COBRE MACIÇO (PREMIUM) -->
+      <div class="cosmic-card p-6 rounded-2xl flex flex-col justify-between border-amber-600/50 hover:border-amber-500">
+        <div>
+          <div class="w-12 h-12 rounded-xl bg-amber-500/20 text-amber-300 flex items-center justify-center text-xl mb-4">
+            ⚡
+          </div>
+          <h3 class="font-playfair text-xl font-bold text-white mb-2">Placa em Folha de Cobre</h3>
+          <p class="text-slate-300 text-xs leading-relaxed mb-4">
+            O ápice da radiestesia técnica. Confeccionada com fenolite cobreada ou folha de cobre maciço para condutividade máxima do magnetismo telúrico.
+          </p>
+          <ul class="text-[11px] text-slate-400 space-y-1.5 mb-6">
+            <li>✓ Máxima potência em Ångströms (Bovis)</li>
+            <li>✓ Blindagem telúrica contra ondas densas</li>
+            <li>✓ <strong>Ganha o E-book + Áudio de Bônus</strong></li>
+          </ul>
+        </div>
+        <div class="pt-4 border-t border-slate-800 flex items-center justify-between">
+          <div>
+            <span class="text-[10px] text-slate-400 block">Padrão Ouro</span>
+            <span class="font-cinzel text-xl font-bold text-gold-400">R$ 95,00</span>
+          </div>
+          <button onclick="adicionarAoCarrinhoComFormato('Placa Radiestésica em Cobre Puro', 95.00, 'Fenolite em Cobre Maciço', 24.90)" class="px-4 py-2 rounded-lg bg-amber-500 hover:bg-amber-400 text-cosmic-950 text-xs font-bold transition">
+            Escolher Cobre
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 1: PARA QUEM NUNCA USOU (LEIGOS & CONSULENTES) -->
+  <section id="iniciantes" class="max-w-6xl mx-auto px-4 py-12">
+    <div class="text-center max-w-2xl mx-auto mb-10">
+      <h2 class="font-cinzel text-2xl sm:text-3xl font-bold text-gold-400 mb-3">Está passando por um terapeuta?</h2>
+      <p class="text-slate-300 text-sm">Entenda em 3 passos simples como os gráficos radiestésicos funcionam na sua casa sem você precisar entender de física quântica.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="cosmic-card p-6 rounded-2xl">
+        <div class="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 font-cinzel font-bold text-xl mb-4">1</div>
+        <h3 class="font-playfair text-lg font-bold text-white mb-2">O Que São Ondas de Forma?</h3>
+        <p class="text-slate-300 text-sm leading-relaxed">
+          Toda forma geométrica gera um campo de ressonância sutil. Quando desenhado com proporções precisas (Proporção Áurea Phi), o gráfico emite vibrações contínuas que equilibram ambientes e pessoas.
+        </p>
+      </div>
+
+      <div class="cosmic-card p-6 rounded-2xl border-gold-500/40">
+        <div class="w-12 h-12 rounded-xl bg-gold-500/20 border border-gold-500/50 flex items-center justify-center text-gold-400 font-cinzel font-bold text-xl mb-4">2</div>
+        <h3 class="font-playfair text-lg font-bold text-white mb-2">O Decágono Central Fixo</h3>
+        <p class="text-slate-300 text-sm leading-relaxed">
+          É o coração obrigatório da sua placa. Ele atua como um "despolarizador e sintonizador": limpa qualquer energia densa e ancora o seu nome e data de nascimento no foco exato da cura.
+        </p>
+      </div>
+
+      <div class="cosmic-card p-6 rounded-2xl">
+        <div class="w-12 h-12 rounded-xl bg-gold-500/10 border border-gold-500/30 flex items-center justify-center text-gold-400 font-cinzel font-bold text-xl mb-4">3</div>
+        <h3 class="font-playfair text-lg font-bold text-white mb-2">Seus Objetivos de Vida</h3>
+        <p class="text-slate-300 text-sm leading-relaxed">
+          Ao redor do decágono, você pode somar de 1 a 13 geometrias específicas: acelerar prosperidade (Turbilhão), blindar de radiação e inveja (SCAP) ou recuperar vitalidade física.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇÃO 2: VITRINE DE PLACAS CONSAGRADAS (CATÁLOGO RÁPIDO) -->
+  <section id="catalogo" class="max-w-6xl mx-auto px-4 py-12">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
+      <div>
+        <span class="text-gold-500 text-xs font-semibold tracking-widest uppercase">Prontas para Ativação</span>
+        <h2 class="font-cinzel text-2xl sm:text-3xl font-bold text-white mt-1">Placas Radiestésicas Clássicas</h2>
+      </div>
+      <a href="personalizar.html" class="mt-3 md:mt-0 text-sm text-gold-400 hover:text-gold-300 flex items-center gap-1 font-medium">
+        <span>Ou monte sua placa com até 13 geometrias</span>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- ITEM 1 -->
+      <div class="cosmic-card rounded-2xl overflow-hidden p-5 flex flex-col justify-between">
+        <div>
+          <div class="w-full h-44 rounded-xl bg-cosmic-950 border border-gold-500/20 flex items-center justify-center relative mb-4">
+            <svg class="w-24 h-24 text-gold-500/80 animate-pulse" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+              <circle cx="50" cy="50" r="45" stroke-width="1.5"/>
+              <circle cx="50" cy="50" r="32" stroke-width="1.2"/>
+              <path d="M50 5 C50 35, 65 50, 95 50 C65 50, 50 65, 50 95 C50 65, 35 50, 5 50 C35 50, 50 35, 50 5" stroke-width="1.5"/>
+            </svg>
+            <span class="absolute top-3 left-3 px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 text-[10px] font-bold">Prosperidade Rápida</span>
+          </div>
+          <h3 class="font-playfair text-xl font-bold text-white mb-1">Turbilhão com Prosperador</h3>
+          <p class="text-xs text-slate-300 mb-3 leading-relaxed">Cria um vórtice centripeto de atração financeira, novos negócios e resolução de trâmites materiais travados.</p>
+          <div class="flex items-center gap-2 text-[11px] text-slate-400 mb-4">
+            <span class="px-2 py-0.5 rounded bg-cosmic-800">528 Hz</span>
+            <span class="px-2 py-0.5 rounded bg-cosmic-800">9.800 Å (Bovis)</span>
+            <span class="px-2 py-0.5 rounded bg-cosmic-800">PVC 1mm</span>
+          </div>
+        </div>
+        <div class="pt-3 border-t border-slate-800 flex items-center justify-between">
+          <div>
+            <span class="text-[10px] text-slate-400 block">A partir de</span>
+            <span class="font-cinzel text-xl font-bold text-gold-400">R$ 68,00</span>
+          </div>
+          <button onclick="adicionarAoCarrinho('Turbilhão com Prosperador', 68.00)" class="px-4 py-2 rounded-lg bg-gold-500 hover:bg-gold-400 text-cosmic-950 text-xs font-bold transition">
+            Adicionar à Sacola
+          </button>
+        </div>
+      </div>
+
+      <!-- ITEM 2 -->
+      <div class="cosmic-card rounded-2xl overflow-hidden p-5 flex flex-col justify-between">
+        <div>
+          <div class="w-full h-44 rounded-xl bg-cosmic-950 border border-gold-500/20 flex items-center justify-center relative mb-4">
+            <svg class="w-24 h-24 text-gold-500/80" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+              <polygon points="50,5 90,25 90,75 50,95 10,75 10,25" stroke-width="1.5"/>
+              <polygon points="50,18 80,33 80,67 50,82 20,67 20,33" stroke-width="1.2"/>
+              <circle cx="50" cy="50" r="14" stroke-width="1.5"/>
+            </svg>
+            <span class="absolute top-3 left-3 px-2 py-0.5 rounded bg-purple-500/20 text-purple-300 border border-purple-500/30 text-[10px] font-bold">Blindagem Forte</span>
+          </div>
+          <h3 class="font-playfair text-xl font-bold text-white mb-1">SCAP Compensador André Philippe</h3>
+          <p class="text-xs text-slate-300 mb-3 leading-relaxed">Neutraliza campos eletromagnéticos nocivos (Wi-Fi, torres 5G, celulares) e limpa energias intrusas de ambientes.</p>
+          <div class="flex items-center gap-2 text-[11px] text-slate-400 mb-4">
+            <span class="px-2 py-0.5 rounded bg-cosmic-800">741 Hz</span>
+            <span class="px-2 py-0.5 rounded bg-cosmic-800">11.500 Å</span>
+            <span class="px-2 py-0.5 rounded bg-cosmic-800">Dupla Face</span>
+          </div>
+        </div>
+        <div class="pt-3 border-t border-slate-800 flex items-center justify-between">
+          <div>
+            <span class="text-[10px] text-slate-400 block">A partir de</span>
+            <span class="font-cinzel text-xl font-bold text-gold-400">R$ 72,00</span>
+          </div>
+          <button onclick="adicionarAoCarrinho('SCAP Compensador André Philippe', 72.00)" class="px-4 py-2 rounded-lg bg-gold-500 hover:bg-gold-400 text-cosmic-950 text-xs font-bold transition">
+            Adicionar à Sacola
+          </button>
+        </div>
+      </div>
+
+      <!-- ITEM 3: PERSONALIZADOR DESTAQUE -->
+      <div class="cosmic-card rounded-2xl overflow-hidden p-5 flex flex-col justify-between border-gold-500/60 bg-gradient-to-b from-cosmic-850 to-cosmic-900 relative">
+        <div class="absolute -right-12 -top-12 w-32 h-32 rounded-full bg-gold-500/10 blur-2xl"></div>
+        <div>
+          <div class="w-full h-44 rounded-xl bg-cosmic-950/70 border border-gold-500/30 flex flex-col items-center justify-center relative mb-4 p-4 text-center">
+            <span class="text-2xl mb-1">✨</span>
+            <span class="font-cinzel text-gold-400 font-bold text-sm">Decágono Fixo + 13 Geometrias</span>
+            <span class="text-[10px] text-slate-400 mt-1">Laudo vibracional emitido por IA e 100% calibrável</span>
+          </div>
+          <h3 class="font-playfair text-xl font-bold text-white mb-1">Placa Quântica Sob Medida</h3>
+          <p class="text-xs text-slate-300 mb-3 leading-relaxed">Você insere seu testemunho (nome/data), escolhe as sinergias radiestésicas e recebe o laudo de ativação personalizado.</p>
+          <div class="flex items-center gap-2 text-[11px] text-slate-400 mb-4">
+            <span class="px-2 py-0.5 rounded bg-gold-500/20 text-gold-300 border border-gold-500/30">Exclusivo</span>
+            <span class="px-2 py-0.5 rounded bg-cosmic-800">Laudo Gemini 2.5</span>
+          </div>
+        </div>
+        <div class="pt-3 border-t border-slate-800 flex items-center justify-between">
+          <div>
+            <span class="text-[10px] text-slate-400 block">Investimento</span>
+            <span class="font-cinzel text-xl font-bold text-gold-400">R$ 68,00</span>
+          </div>
+          <a href="personalizar.html" class="px-4 py-2 rounded-lg bg-gradient-to-r from-gold-500 to-gold-400 text-cosmic-950 text-xs font-bold hover:brightness-110 transition">
+            Personalizar Agora
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SEÇÃO 3: O E-BOOK PRÁTICO (NOTEBOOK LM / PÚBLICO LEIGO) -->
+  <section id="ebook" class="max-w-5xl mx-auto px-4 py-14">
+    <div class="cosmic-card rounded-3xl p-8 sm:p-12 border-gold-500/40 relative overflow-hidden">
+      <div class="absolute -bottom-20 -right-20 w-80 h-80 rounded-full bg-gold-500/10 blur-3xl pointer-events-none"></div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+        <div class="md:col-span-5 flex justify-center">
+          <div class="w-60 h-80 rounded-2xl bg-gradient-to-br from-cosmic-950 via-cosmic-900 to-cosmic-850 border-2 border-gold-500/50 p-6 flex flex-col justify-between shadow-2xl relative transform hover:-rotate-1 transition duration-300">
+            <div>
+              <span class="text-[10px] tracking-widest text-gold-400 uppercase font-cinzel">E-book Oficial</span>
+              <h4 class="font-playfair text-xl font-bold text-white mt-2 leading-snug">Geometria Sagrada no Cotidiano</h4>
+              <p class="text-[11px] text-slate-300 mt-2">O Guia Prático para Despertar Prosperidade, Saúde e Proteção em Casa.</p>
+            </div>
+            <div class="pt-4 border-t border-gold-500/20 flex items-center justify-between text-[10px] text-gold-400">
+              <span>Edição Atualizada</span>
+              <span>Inclui Áudio</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="md:col-span-7">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold-500/15 border border-gold-500/30 text-gold-400 text-xs font-semibold mb-3">
+            📚 Porta de Entrada para Iniciantes
+          </div>
+          <h2 class="font-cinzel text-2xl sm:text-3xl font-bold text-white mb-4">
+            Compreenda o Tratamento que seu Terapeuta Indicou
+          </h2>
+          <p class="text-slate-300 text-sm leading-relaxed mb-6">
+            Desenvolvido a partir das dúvidas mais frequentes de quem frequenta sessões holísticas. Sem termos complexos de física, direto ao ponto:
+          </p>
+
+          <ul class="space-y-2.5 text-xs sm:text-sm text-slate-300 mb-8">
+            <li class="flex items-start gap-2.5">
+              <span class="text-gold-400 text-base">✓</span>
+              <span><strong>Por que o Decágono Duplo é fixo e obrigatório</strong> em toda emissão de cura.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-gold-400 text-base">✓</span>
+              <span><strong>Como sintonizar o seu testemunho</strong> (seu nome completo e nascimento) na placa.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-gold-400 text-base">✓</span>
+              <span><strong>Como alinhar a 0° Norte Magnético</strong> usando apenas a bússola do seu celular.</span>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="text-gold-400 text-base">✓</span>
+              <span><strong>Tabela prática de Frequências Solfeggio</strong> (432 Hz, 528 Hz e 741 Hz).</span>
+            </li>
+          </ul>
+
+          <div class="flex flex-wrap items-center gap-4">
+            <div class="bg-cosmic-950 px-4 py-2 rounded-xl border border-gold-500/30">
+              <span class="text-[10px] text-slate-400 block">Acesso Imediato</span>
+              <span class="font-cinzel text-xl font-bold text-gold-400">R$ 24,90</span>
+            </div>
+            <button onclick="comprarEbook()" class="px-6 py-3 rounded-xl bg-gold-500 hover:bg-gold-400 text-cosmic-950 font-bold text-xs uppercase tracking-wider transition">
+              Adquirir E-book Digital
+            </button>
+            <span class="text-xs text-slate-400 italic">★ Gratuito para quem encomenda a Placa Sob Medida</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BARRA DE NAVEGAÇÃO INFERIOR FIXA (MOBILE UX) -->
+  <nav class="fixed bottom-0 left-0 right-0 z-50 bg-cosmic-950/95 backdrop-blur-lg border-t border-gold-500/20 py-2.5 px-4 flex items-center justify-around md:hidden">
+    <a href="index.html" class="flex flex-col items-center gap-1 text-gold-400">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+      <span class="text-[10px] font-medium">Início</span>
+    </a>
+    <a href="personalizar.html" class="flex flex-col items-center gap-1 text-slate-400 hover:text-gold-400">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><polygon points="12 2 15 8 22 9 17 14 18 21 12 17 6 21 7 14 2 9 9 8 12 2"/></svg>
+      <span class="text-[10px] font-medium">Personalizar</span>
+    </a>
+    <a href="carrinho.html" class="flex flex-col items-center gap-1 text-slate-400 hover:text-gold-400">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+      <span class="text-[10px] font-medium">Sacola</span>
+    </a>
+    <a href="pagamento.html" class="flex flex-col items-center gap-1 text-slate-400 hover:text-gold-400">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+      <span class="text-[10px] font-medium">Checkout</span>
+    </a>
+  </nav>
+
+  <!-- JAVASCRIPT GLOBAL DE SINCRONIZAÇÃO -->
+  <script>
+    // Gerenciador de Estado Compartilhado
+    const PedidoManager = {
+      get() {
+        const salvo = localStorage.getItem('geometria_pedido_v2');
+        return salvo ? JSON.parse(salvo) : {
+          nucleoFixo: "Decágono Duplo (Obrigatório)",
+          geometriasAdicionais: ["Turbilhão Prosperador", "SCAP Compensador"],
+          testemunho: {
+            nome: "Juliana Silveira Santos",
+            nascimento: "14/08/1988",
+            localidade: "Mogi Guaçu / SP",
+            intencao: "Harmonia integral, prosperidade abundante e blindagem energética"
+          },
+          material: "Placa PVC 1mm (Alta Emissão)",
+          frequencia: "528 Hz",
+          bovis: "9.500 Å",
+          consagracao: true,
+          valorPlaca: 68.00,
+          valorConsagracao: 25.00,
+          frete: 24.90,
+          cepDestino: "13.843-186",
+          laudoIA: "Diagnóstico Vibracional: O Decágono central ancora o testemunho limpando dissonâncias cósmicas..."
+        };
+      },
+      save(dados) {
+        const atual = this.get();
+        localStorage.setItem('geometria_pedido_v2', JSON.stringify({ ...atual, ...dados }));
+      }
+    };
+
+    function adicionarAoCarrinho(titulo, valor) {
+      adicionarAoCarrinhoComFormato(titulo, valor, "Placa PVC 1mm Gravada", 24.90);
+    }
+
+    function adicionarAoCarrinhoComFormato(titulo, valor, material, freteBase) {
+      const isDigital = material.toLowerCase().includes('digital') || material.toLowerCase().includes('ebook');
+      const frete = isDigital ? 0.00 : (freteBase || 24.90);
+      const total = valor + frete;
+      const pixDesc = +(total * 0.95).toFixed(2);
+
+      PedidoManager.save({
+        placaSelecionada: titulo,
+        valorPlaca: valor,
+        material: material,
+        frete: frete,
+        isDigital: isDigital,
+        total: total,
+        pixComDesconto: pixDesc
+      });
+      window.location.href = 'carrinho.html';
+    }
+
+    function comprarEbook() {
+      PedidoManager.save({
+        placaSelecionada: "E-book: Geometria Sagrada no Cotidiano + Áudio Oficial",
+        valorPlaca: 24.90,
+        material: "E-book Digital (PDF) + Audioguia Oficial (MP3)",
+        frete: 0.00,
+        consagracao: false,
+        isDigital: true,
+        total: 24.90,
+        pixComDesconto: 23.65
+      });
+      window.location.href = 'pagamento.html';
+    }
+  </script>
+</body>
+</html>

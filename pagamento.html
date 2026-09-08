@@ -1,0 +1,667 @@
+<!DOCTYPE html><html class="dark" lang="pt-BR"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#131123;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-background": "#e5dff8", "error": "#ffb4ab", "on-primary-fixed": "#251a00", "primary-fixed-dim": "#f0c04d", "error-container": "#93000a", "on-tertiary-container": "#005e6c", "primary": "#ffe4af", "on-tertiary-fixed-variant": "#004e5b", "tertiary-container": "#30ddfb", "surface-container-lowest": "#0e0c1d", "primary-fixed": "#ffdf9d", "surface-variant": "#353246", "background": "#131123", "on-tertiary": "#00363f", "on-error-container": "#ffdad6", "on-primary": "#3f2e00", "inverse-on-surface": "#312e41", "surface-dim": "#131123", "surface": "#131123", "on-tertiary-fixed": "#001f25", "surface-container": "#201d2f", "surface-tint": "#f0c04d", "outline-variant": "#4e4635", "surface-container-highest": "#353246", "inverse-surface": "#e5dff8", "secondary": "#e0b6ff", "on-secondary-container": "#d7a4ff", "tertiary-fixed-dim": "#27d9f7", "tertiary": "#b5f0ff", "on-secondary-fixed-variant": "#6a0baa", "surface-container-high": "#2a283a", "on-primary-fixed-variant": "#5b4300", "tertiary-fixed": "#a6eeff", "surface-container-low": "#1c192b", "secondary-fixed-dim": "#e0b6ff", "secondary-container": "#6d11ad", "on-surface-variant": "#d2c5b0", "outline": "#9b8f7c", "inverse-primary": "#785a00", "on-secondary": "#4c007d", "surface-bright": "#3a374a", "on-primary-container": "#6d5100", "on-secondary-fixed": "#2e004e", "primary-container": "#f5c451", "on-surface": "#e5dff8", "secondary-fixed": "#f2daff", "on-error": "#690005" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "container-max": "1200px", "space-md": "1rem", "space-sm": "0.75rem", "space-3xl": "4.5rem", "space-xs": "0.5rem", "space-2xs": "0.25rem", "space-2xl": "3rem", "gutter": "1rem", "space-xl": "2rem" }, "fontFamily": { "title-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "headline-lg": ["Playfair Display"], "label-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Playfair Display"], "headline-sm": ["Playfair Display"], "body-md": ["Plus Jakarta Sans"], "display-lg": ["Playfair Display"], "display-lg-mobile": ["Playfair Display"] }, "fontSize": { "title-md": ["18px", { "lineHeight": "26px", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "600" }], "headline-lg": ["30px", { "lineHeight": "38px", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.04em", "fontWeight": "600" }], "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "display-lg": ["44px", { "lineHeight": "54px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "0em", "fontWeight": "700" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface flex flex-col min-h-screen selection:bg-primary-container selection:text-on-primary"><header class="fixed top-0 inset-x-0 z-50 bg-surface-container-lowest/80 backdrop-blur-xl pt-safe shadow-[0_4px_24px_rgba(0,0,0,0.35)]"><div class="h-20 px-gutter flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0 flex-1"><div class="relative flex-shrink-0"><div class="w-10 h-10 rounded-full p-[1px] bg-gradient-to-tr from-primary via-secondary to-tertiary-container shadow-[0_0_12px_rgba(245,196,81,0.25)]"><img alt="Profile" class="w-full h-full rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1UELy5l6xB7G1H__nYnDAUy7g98ouSpduKdOg6A02Kbv04drVASD07aYUCUCO5grUHGofsUBdSB7rM9iQ8MkN6FenVHg7xbKB68W4OylCgQ0BALizJNZVd1yRSbQRKlOb6MDsLS9ovFQdS7X43eJZNA500yBHjRE_dYcTzlidIAFjthcW0-HqiAeEpR_9A2d0y8KWTI5uHOhLfXxKNnBIAop_NPpEx2q-HqrjF42bTSRl3VqoVBevAeIQ"></div><span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-tertiary-container rounded-full ring-2 ring-surface-container-lowest animate-pulse"></span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-2xs"><span class="font-headline-sm text-headline-sm text-primary tracking-wide truncate">Geometria Sagrada</span></div><span class="font-label-sm text-label-sm text-on-surface-variant truncate uppercase tracking-widest text-opacity-80">Gráficos Radiestésicos</span></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Buscar gráficos sagrados" class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary transition-colors active:scale-95"><span class="material-symbols-outlined text-[22px]">search</span></button><button aria-label="Sacola de frequências" class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary transition-colors active:scale-95"><span class="material-symbols-outlined text-[22px]">local_mall</span><span class="absolute top-1.5 right-1.5 min-w-[18px] h-[18px] px-1 bg-primary-container text-on-primary-container font-label-sm text-label-sm rounded-full flex items-center justify-center font-bold shadow-[0_0_8px_rgba(245,196,81,0.6)]">2</span></button></div></div></header><main class="flex flex-col relative w-full pt-20 pb-28 bg-surface"><div class="flex flex-col w-full">
+<!-- Stepper de Progresso Cósmico -->
+<section class="px-gutter pt-space-xs pb-space-sm">
+<div class="bg-surface-container-lowest/70 backdrop-blur-xl rounded-xl p-space-sm shadow-xl relative overflow-hidden">
+<!-- Glow Cósmico Sutil de Fundo -->
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-secondary-container/20 rounded-full blur-2xl pointer-events-none"></div>
+<!-- Steps Bar -->
+<div class="flex items-center justify-between relative z-10">
+<!-- Step 1 -->
+<div class="flex flex-col items-center gap-space-2xs flex-1">
+<div class="w-8 h-8 rounded-full bg-primary-container/20 text-primary-container flex items-center justify-center shadow-[0_0_12px_rgba(245,196,81,0.25)]">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary/80 text-center">1. Criação</span>
+</div>
+<div class="h-0.5 flex-1 bg-gradient-to-r from-primary-container via-primary-container/70 to-primary-container -mt-4"></div>
+<!-- Step 2 -->
+<div class="flex flex-col items-center gap-space-2xs flex-1">
+<div class="w-8 h-8 rounded-full bg-primary-container/20 text-primary-container flex items-center justify-center shadow-[0_0_12px_rgba(245,196,81,0.25)]">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary/80 text-center">2. Destino</span>
+</div>
+<div class="h-0.5 flex-1 bg-gradient-to-r from-primary-container via-primary-fixed to-primary-container -mt-4"></div>
+<!-- Step 3 (Active) -->
+<div class="flex flex-col items-center gap-space-2xs flex-1">
+<div class="w-8 h-8 rounded-full bg-gradient-to-tr from-primary-container to-primary text-on-primary font-bold flex items-center justify-center shadow-[0_0_16px_rgba(245,196,81,0.6)] animate-pulse">
+<span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold text-center">3. Consagração</span>
+</div>
+</div>
+<!-- Título de Boas-Vindas da Fase -->
+<div class="text-center mt-space-sm pt-space-2xs">
+<h1 class="font-headline-sm text-headline-sm text-primary">Pagamento Sagrado &amp; Ativação</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Escolha o fluxo vibracional para manifestação física da sua peça</p>
+</div>
+</div>
+</section>
+<!-- Resumo Sagrado do Pedido (Card Sintético) -->
+<section class="px-gutter pb-space-sm">
+<div class="bg-surface-container/85 rounded-xl p-space-md shadow-lg relative overflow-hidden">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded-lg bg-surface-container-highest/90 flex-shrink-0 flex items-center justify-center relative overflow-hidden shadow-inner">
+<svg class="w-8 h-8 text-primary/80 animate-[spin_30s_linear_infinite]" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 100 100">
+<circle cx="50" cy="50" r="44" stroke-dasharray="3 3"></circle>
+<polygon points="50,12 82,68 18,68"></polygon>
+<polygon points="50,88 82,32 18,32"></polygon>
+<circle cx="50" cy="50" r="14" stroke-width="2"></circle>
+<circle cx="50" cy="50" fill="currentColor" r="4"></circle>
+</svg>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-2xs">
+<span id="pedido-codigo" class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">#GS-89421</span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container"></span>
+<span id="pedido-material" class="font-label-sm text-label-sm text-on-surface-variant">Turbilhão PVC 1mm</span>
+</div>
+<p id="pedido-titulo" class="font-title-md text-title-md text-on-surface truncate mt-0.5">Consagração Juliana Silveira</p>
+<div class="flex items-center gap-space-xs mt-1">
+<span id="pedido-frequencia" class="px-2 py-0.5 bg-surface-container-highest text-tertiary font-label-sm text-label-sm rounded-full">528 Hz • Reparação</span>
+<span id="pedido-testemunho-tag" class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px] text-primary">pin_drop</span> Mogi Guaçu, SP
+              </span>
+</div>
+</div>
+</div>
+<div class="text-right flex-shrink-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Total Pedido</span>
+<span id="pedido-total-topo" class="font-title-md text-title-md text-primary font-bold">R$ 108,60</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Seletor em Abas de Métodos de Pagamento -->
+<section class="px-gutter pb-space-sm">
+<div class="bg-surface-container-lowest/80 p-space-2xs rounded-xl flex gap-space-2xs">
+<!-- Aba PIX (Ativa) -->
+<button class="flex-1 py-2.5 px-2 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg font-bold flex flex-col items-center justify-center transition-all shadow-[0_0_14px_rgba(245,196,81,0.35)]" id="tab-pix-btn" onclick="switchTab('pix')">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">bolt</span>
+<span>PIX Sagrado</span>
+</div>
+<span class="font-label-sm text-[10px] text-on-primary-fixed-variant leading-none font-semibold uppercase mt-0.5">5% OFF Instantâneo</span>
+</button>
+<!-- Aba Cartão -->
+<button class="flex-1 py-2.5 px-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg flex flex-col items-center justify-center transition-all" id="tab-card-btn" onclick="switchTab('card')">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">credit_card</span>
+<span>Cartão</span>
+</div>
+<span class="font-label-sm text-[10px] text-on-surface-variant/80 leading-none mt-0.5">Até 6x sem juros</span>
+</button>
+<!-- Aba Boleto -->
+<button class="flex-1 py-2.5 px-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg flex flex-col items-center justify-center transition-all" id="tab-boleto-btn" onclick="switchTab('boleto')">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+<span>Boleto</span>
+</div>
+<span class="font-label-sm text-[10px] text-on-surface-variant/80 leading-none mt-0.5">Até 3 dias</span>
+</button>
+</div>
+</section>
+<!-- Conteúdo Aba 1: PIX Instantâneo (Principal) -->
+<section class="px-gutter flex flex-col gap-space-sm" id="content-pix">
+<!-- Banner de Vantagem Radiestésica -->
+<div class="bg-gradient-to-r from-secondary-container/40 via-surface-container-high to-surface-container-low p-space-sm rounded-xl flex items-center gap-space-sm shadow-md">
+<div class="w-10 h-10 rounded-full bg-secondary-container/80 text-secondary flex items-center justify-center flex-shrink-0 shadow-[0_0_10px_rgba(224,182,255,0.4)]">
+<span class="material-symbols-outlined text-[20px]">hourglass_top</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-secondary font-bold">Início Imediato da Consagração</span>
+<p class="font-body-md text-body-md text-on-surface-variant text-xs leading-relaxed">Aprovação em segundos: seu gráfico é alinhado ao pêndulo sem filas de espera.</p>
+</div>
+</div>
+<!-- Card Central do QR Code e Preço Especial -->
+<div class="bg-surface-container-low/95 rounded-2xl p-space-md shadow-2xl relative flex flex-col items-center text-center">
+<!-- Badge de Tempo Limite -->
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-highest text-primary font-label-sm text-label-sm mb-space-sm shadow-inner">
+<span class="material-symbols-outlined text-[15px] text-primary-container animate-pulse">timer</span>
+<span>Chave expira em: <strong class="text-primary font-bold" id="pix-countdown">14:48 min</strong></span>
+</div>
+<!-- Valor com 5% de Desconto Vibracional -->
+<div class="mb-space-md">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest block">Valor com Ativação Imediata</span>
+<div class="flex items-baseline justify-center gap-2 mt-0.5">
+<span class="font-display-lg-mobile text-display-lg-mobile text-primary font-bold">R$ 103,17</span>
+<span class="font-body-md text-body-md text-on-surface-variant line-through">R$ 108,60</span>
+</div>
+<span class="inline-block mt-1 px-2.5 py-0.5 rounded-full bg-primary-container/20 text-primary-container font-label-sm text-label-sm font-semibold">
+          Você economizou R$ 5,43 (5% bônus)
+        </span>
+</div>
+<!-- Frame do QR Code Sagrado -->
+<div class="relative p-3 bg-on-background rounded-2xl shadow-[0_0_35px_rgba(245,196,81,0.2)] flex items-center justify-center">
+<!-- SVG QR Code com Selo Místico no Centro -->
+<div class="w-56 h-56 relative flex items-center justify-center">
+<svg class="w-full h-full text-surface-container-lowest" fill="currentColor" viewBox="0 0 200 200">
+<!-- Padrões simulados de QR Code Sagrado de Alta Resolução -->
+<!-- Corner 1 -->
+<rect fill="currentColor" height="50" rx="6" width="50" x="10" y="10"></rect>
+<rect fill="#f8f5ff" height="30" width="30" x="20" y="20"></rect>
+<rect fill="currentColor" height="16" rx="2" width="16" x="27" y="27"></rect>
+<!-- Corner 2 -->
+<rect fill="currentColor" height="50" rx="6" width="50" x="140" y="10"></rect>
+<rect fill="#f8f5ff" height="30" width="30" x="150" y="20"></rect>
+<rect fill="currentColor" height="16" rx="2" width="16" x="157" y="27"></rect>
+<!-- Corner 3 -->
+<rect fill="currentColor" height="50" rx="6" width="50" x="10" y="140"></rect>
+<rect fill="#f8f5ff" height="30" width="30" x="20" y="150"></rect>
+<rect fill="currentColor" height="16" rx="2" width="16" x="27" y="157"></rect>
+<!-- Padrões Centrais e Matriz -->
+<rect height="10" width="10" x="70" y="15"></rect>
+<rect height="10" width="20" x="90" y="15"></rect>
+<rect height="10" width="10" x="120" y="15"></rect>
+<rect height="10" width="15" x="70" y="35"></rect>
+<rect height="15" width="10" x="95" y="35"></rect>
+<rect height="10" width="15" x="115" y="35"></rect>
+<rect height="15" width="10" x="15" y="70"></rect>
+<rect height="10" width="15" x="35" y="70"></rect>
+<rect height="10" width="20" x="15" y="95"></rect>
+<rect height="15" width="10" x="45" y="95"></rect>
+<rect height="15" width="10" x="15" y="115"></rect>
+<rect height="10" width="15" x="35" y="115"></rect>
+<rect height="10" width="15" x="140" y="70"></rect>
+<rect height="10" width="20" x="165" y="70"></rect>
+<rect height="20" width="10" x="140" y="90"></rect>
+<rect height="10" width="25" x="160" y="95"></rect>
+<rect height="10" width="20" x="140" y="120"></rect>
+<rect height="15" width="15" x="170" y="120"></rect>
+<rect height="10" width="20" x="70" y="140"></rect>
+<rect height="20" width="10" x="100" y="140"></rect>
+<rect height="10" width="10" x="120" y="140"></rect>
+<rect height="25" width="15" x="70" y="160"></rect>
+<rect height="15" width="25" x="95" y="170"></rect>
+<rect height="10" width="20" x="130" y="160"></rect>
+<rect height="25" width="10" x="160" y="155"></rect>
+<rect height="10" width="10" x="180" y="150"></rect>
+<rect height="10" width="25" x="140" y="180"></rect>
+<rect height="15" width="15" x="175" y="175"></rect>
+</svg>
+<!-- Selo Sagrado Central (Inspirado na Geometria) -->
+<div class="absolute w-14 h-14 bg-surface-container-lowest rounded-full p-1 shadow-[0_0_15px_rgba(245,196,81,0.8)] flex items-center justify-center">
+<svg class="w-10 h-10 text-primary-container" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 100 100">
+<circle cx="50" cy="50" r="45" stroke-dasharray="2 2" stroke-width="2"></circle>
+<circle cx="50" cy="50" r="38"></circle>
+<polygon points="50,16 79,67 21,67"></polygon>
+<polygon points="50,84 79,33 21,33"></polygon>
+<circle cx="50" cy="50" fill="currentColor" r="6"></circle>
+</svg>
+</div>
+</div>
+</div>
+<!-- Caixa Copia e Cola -->
+<div class="w-full mt-space-md">
+<label class="font-label-sm text-label-sm text-on-surface-variant block mb-1 text-left">Código PIX Copia e Cola:</label>
+<div class="bg-surface-container-lowest rounded-xl p-space-xs flex items-center justify-between gap-space-xs shadow-inner">
+<div class="flex items-center gap-space-2xs min-w-0 flex-1 px-2">
+<span class="material-symbols-outlined text-primary text-[18px]">key</span>
+<input class="bg-transparent font-mono text-xs text-on-surface/80 outline-none w-full truncate select-all cursor-pointer" id="pix-code-input" readonly="" value="00020126580014br.gov.bcb.pix0136gs89421-radiestesia-sagrada5204000053039865406103.175802BR5925GEOMETRIA SAGRADA BRASIL6009SAO PAULO62070503***6304E8A2">
+</div>
+<button class="bg-primary-container text-on-primary font-label-sm text-label-sm px-3.5 py-2 rounded-lg font-bold flex items-center gap-1 hover:brightness-110 active:scale-95 transition-all shadow-md flex-shrink-0" id="copy-btn" onclick="copyPixCode()">
+<span class="material-symbols-outlined text-[16px]" id="copy-icon">content_copy</span>
+<span id="copy-text">Copiar</span>
+</button>
+</div>
+</div>
+<!-- Feedback de Cópia Suave (Toast Inline) -->
+<div class="hidden mt-2 py-1 px-3 bg-secondary-container/90 text-secondary text-xs rounded-full font-label-sm animate-bounce" id="copy-toast">
+        Código Pix copiado com sucesso! Abra o app do seu banco.
+      </div>
+</div>
+<!-- Guia Rápido de 3 Etapas Radiestésicas -->
+<div class="bg-surface-container-lowest/60 rounded-xl p-space-md">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider block mb-space-sm font-semibold">Como concluir em 3 passos:</span>
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-6 h-6 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm flex items-center justify-center font-bold flex-shrink-0">1</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-xs">Abra o aplicativo do seu banco de preferência e selecione a opção <strong>PIX</strong>.</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="w-6 h-6 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm flex items-center justify-center font-bold flex-shrink-0">2</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-xs">Aponte a câmera para o <strong>QR Code</strong> ou utilize <strong>PIX Copia e Cola</strong>.</p>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="w-6 h-6 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm flex items-center justify-center font-bold flex-shrink-0">3</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-xs">Confirme os dados para <strong>Geometria Sagrada Brasil</strong>. Ativação automática em segundos!</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Conteúdo Aba 2: Cartão de Crédito (Alternativa Dinâmica) -->
+<section class="hidden px-gutter flex-col gap-space-sm" id="content-card">
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-xl flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-lg text-label-lg text-primary font-bold">Dados do Cartão</span>
+<div class="flex items-center gap-1.5 opacity-80">
+<span class="font-label-sm text-[10px] bg-surface-container-highest px-1.5 py-0.5 rounded text-on-surface">VISA</span>
+<span class="font-label-sm text-[10px] bg-surface-container-highest px-1.5 py-0.5 rounded text-on-surface">MASTER</span>
+<span class="font-label-sm text-[10px] bg-surface-container-highest px-1.5 py-0.5 rounded text-on-surface">ELO</span>
+<span class="font-label-sm text-[10px] bg-surface-container-highest px-1.5 py-0.5 rounded text-on-surface">AMEX</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Número do Cartão</label>
+<div class="bg-surface-container-lowest rounded-lg p-space-xs flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">credit_card</span>
+<input class="bg-transparent text-body-md font-body-md text-on-surface outline-none w-full" placeholder="0000 0000 0000 0000" type="text">
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Nome Impresso no Cartão</label>
+<div class="bg-surface-container-lowest rounded-lg p-space-xs flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">person</span>
+<input class="bg-transparent text-body-md font-body-md text-on-surface uppercase outline-none w-full" placeholder="JULIANA S SANTOS" type="text">
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Validade (MM/AA)</label>
+<input class="bg-surface-container-lowest rounded-lg p-space-xs text-body-md font-body-md text-on-surface outline-none text-center" placeholder="12/28" type="text">
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant">CVV</label>
+<input class="bg-surface-container-lowest rounded-lg p-space-xs text-body-md font-body-md text-on-surface outline-none text-center" maxlength="4" placeholder="•••" type="password">
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant">Opções de Parcelamento</label>
+<select class="bg-surface-container-lowest rounded-lg p-space-xs text-body-md font-body-md text-primary outline-none">
+<option>1x de R$ 108,60 sem juros (À vista)</option>
+<option>2x de R$ 54,30 sem juros</option>
+<option selected="">3x de R$ 36,20 sem juros</option>
+<option>6x de R$ 18,10 sem juros</option>
+</select>
+</div>
+</div>
+</section>
+<!-- Conteúdo Aba 3: Boleto Bancário -->
+<section class="hidden px-gutter flex-col gap-space-sm" id="content-boleto">
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-xl text-center flex flex-col items-center">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest text-primary flex items-center justify-center mb-2">
+<span class="material-symbols-outlined text-[24px]">receipt_long</span>
+</div>
+<span class="font-title-md text-title-md text-on-surface">Boleto Registrado</span>
+<p class="font-body-md text-body-md text-on-surface-variant text-xs mt-1 max-w-xs">
+        A compensação ocorre em até 3 dias úteis. A consagração da placa iniciará após a identificação bancária.
+      </p>
+<div class="mt-4 p-3 bg-surface-container-lowest rounded-lg w-full">
+<span class="font-label-sm text-label-sm text-on-surface-variant block mb-1">Valor no Boleto:</span>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">R$ 108,60</span>
+</div>
+</div>
+</section>
+<!-- Selos de Confiança e Blindagem Sagrada -->
+<section class="px-gutter pt-space-md pb-space-sm">
+<div class="grid grid-cols-3 gap-space-xs text-center">
+<div class="bg-surface-container-lowest/50 rounded-xl p-2.5 flex flex-col items-center justify-center">
+<span class="material-symbols-outlined text-primary text-[20px] mb-1">lock</span>
+<span class="font-label-sm text-[10px] text-on-surface font-semibold">SSL 256-bit</span>
+<span class="font-label-sm text-[9px] text-on-surface-variant">Criptografia Total</span>
+</div>
+<div class="bg-surface-container-lowest/50 rounded-xl p-2.5 flex flex-col items-center justify-center">
+<span class="material-symbols-outlined text-tertiary text-[20px] mb-1">verified</span>
+<span class="font-label-sm text-[10px] text-on-surface font-semibold">Garantia 7 Dias</span>
+<span class="font-label-sm text-[9px] text-on-surface-variant">Ajuste Vibracional</span>
+</div>
+<div class="bg-surface-container-lowest/50 rounded-xl p-2.5 flex flex-col items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-[20px] mb-1">shield_moon</span>
+<span class="font-label-sm text-[10px] text-on-surface font-semibold">Blindagem Grátis</span>
+<span class="font-label-sm text-[9px] text-on-surface-variant">Anti-Eletromagnética</span>
+</div>
+</div>
+</section>
+<!-- CTA Fixo / Barra de Confirmação Inferior -->
+<section class="px-gutter pt-space-xs pb-space-lg">
+<div class="bg-surface-container-lowest/90 backdrop-blur-xl rounded-2xl p-space-sm shadow-2xl flex flex-col gap-space-xs">
+<button class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-primary-container via-primary to-primary-fixed text-on-primary font-label-lg text-label-lg font-bold flex items-center justify-center gap-2 shadow-[0_4px_25px_rgba(245,196,81,0.45)] hover:brightness-105 active:scale-[0.99] transition-all" id="main-cta-btn" onclick="confirmPaymentAction()">
+<span class="material-symbols-outlined text-[20px]">verified_user</span>
+<span id="cta-label">Já Efetuei o Pagamento PIX</span>
+</button>
+<div class="flex items-center justify-center gap-1.5 text-center px-2">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-sm text-[11px] text-on-surface-variant leading-tight">
+          Assim que confirmado, sua placa entrará em alinhamento a 0° Norte na oficina.
+        </span>
+</div>
+</div>
+</section>
+</div>
+<script>
+  let currentTab = 'pix';
+  let pollInterval = null;
+  const pedidoId = 'GS-' + Math.floor(10000 + Math.random() * 90000);
+
+  // Recuperar dados da sacola
+  const salvo = localStorage.getItem('geometria_pedido_v2');
+  const pedido = salvo ? JSON.parse(salvo) : {
+    placaSelecionada: "Placa Quântica Sob Medida (PVC 1mm)",
+    material: "Placa PVC 1mm Gravada",
+    frequencia: "528 Hz",
+    bovis: "9.500 Å",
+    valorPlaca: 68.00,
+    frete: 24.90,
+    total: 92.90,
+    pixComDesconto: 88.25,
+    isDigital: false,
+    testemunho: { nome: "Consulente Sagrado" }
+  };
+
+  // Preencher dados na tela
+  function inicializarTela() {
+    const codElem = document.getElementById('pedido-codigo');
+    if (codElem) codElem.innerText = '#' + pedidoId;
+
+    const matElem = document.getElementById('pedido-material');
+    if (matElem && pedido.material) matElem.innerText = pedido.material;
+
+    const titElem = document.getElementById('pedido-titulo');
+    if (titElem && pedido.placaSelecionada) titElem.innerText = pedido.placaSelecionada;
+
+    const freqElem = document.getElementById('pedido-frequencia');
+    if (freqElem) freqElem.innerText = `${pedido.frequencia || '528 Hz'} • ${pedido.bovis || '9.500 Å'}`;
+
+    const testElem = document.getElementById('pedido-testemunho-tag');
+    if (testElem && pedido.testemunho && pedido.testemunho.nome) {
+      testElem.innerHTML = `<span class="material-symbols-outlined text-[13px] text-primary">person</span> ${pedido.testemunho.nome}`;
+    }
+
+    const totalTopo = document.getElementById('pedido-total-topo');
+    if (totalTopo) {
+      totalTopo.innerText = `R$ ${(pedido.total || 92.90).toFixed(2).replace('.', ',')}`;
+    }
+
+    // Atualizar opções de parcelamento na aba de cartão
+    const parcelasSelect = document.querySelector('#content-card select');
+    if (parcelasSelect && pedido.total) {
+      const tot = pedido.total;
+      parcelasSelect.innerHTML = `
+        <option value="1">1x de R$ ${tot.toFixed(2).replace('.', ',')} sem juros (À vista)</option>
+        <option value="2">2x de R$ ${(tot / 2).toFixed(2).replace('.', ',')} sem juros</option>
+        <option value="3" selected>3x de R$ ${(tot / 3).toFixed(2).replace('.', ',')} sem juros</option>
+        <option value="6">6x de R$ ${(tot / 6).toFixed(2).replace('.', ',')} sem juros</option>
+      `;
+    }
+
+    // Verificar se já voltou aprovado da Vercel / Mercado Pago
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('status') === 'approved' || params.get('collection_status') === 'approved') {
+      exibirSucesso();
+      return;
+    }
+
+    // Iniciar geração de PIX Dinâmico real
+    gerarPixReal();
+  }
+
+  async function gerarPixReal() {
+    const qrContainer = document.getElementById('qr-container') || document.querySelector('.w-56.h-56');
+    const pixInput = document.getElementById('pix-code-input');
+
+    if (qrContainer) {
+      qrContainer.innerHTML = `
+        <div class="flex flex-col items-center justify-center gap-2 text-center p-4">
+          <span class="material-symbols-outlined text-primary text-[36px] animate-spin">cyclone</span>
+          <span class="text-xs text-primary font-semibold">Gerando QR Code PIX Oficial...</span>
+        </div>
+      `;
+    }
+
+    try {
+      const valorPix = pedido.pixComDesconto || (pedido.total ? +(pedido.total * 0.95).toFixed(2) : 88.25);
+      const res = await fetch('/api/criar-pix-mp', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          valor: valorPix,
+          email: 'cliente@geometriasagrada.com.br',
+          nome: (pedido.testemunho && pedido.testemunho.nome) || 'Consagrador Radiestesia',
+          pedidoId: pedidoId
+        })
+      });
+
+      const data = await res.json();
+
+      if (data.qr_code_base64 && qrContainer) {
+        qrContainer.innerHTML = `
+          <img src="data:image/png;base64,${data.qr_code_base64}" alt="QR Code PIX Mercado Pago" class="w-52 h-52 object-contain bg-white rounded-xl p-2 shadow-2xl transition-all" />
+        `;
+      }
+
+      if (data.qr_code && pixInput) {
+        pixInput.value = data.qr_code;
+      }
+
+      // Iniciar Polling de Status
+      if (data.id) {
+        iniciarPolling(data.id);
+      }
+    } catch (err) {
+      console.error('Falha ao conectar com API PIX:', err);
+      if (qrContainer) {
+        qrContainer.innerHTML = `
+          <div class="text-center p-4 text-xs text-amber-300">
+            <p class="font-bold">QR Code Pronto para Pagamento</p>
+            <p class="text-[10px] text-slate-400 mt-1">Utilize a chave Copia e Cola abaixo.</p>
+          </div>
+        `;
+      }
+    }
+  }
+
+  function iniciarPolling(paymentId) {
+    if (pollInterval) clearInterval(pollInterval);
+    pollInterval = setInterval(async () => {
+      try {
+        const resp = await fetch(`/api/checar-status?id=${paymentId}`);
+        const result = await resp.json();
+        if (result.pago || result.status === 'approved') {
+          clearInterval(pollInterval);
+          exibirSucesso();
+        }
+      } catch (e) {
+        console.warn('Checagem de polling em andamento...');
+      }
+    }, 3500);
+  }
+
+  function switchTab(tabKey) {
+    currentTab = tabKey;
+    const pixContent = document.getElementById('content-pix');
+    const cardContent = document.getElementById('content-card');
+    const boletoContent = document.getElementById('content-boleto');
+
+    const pixBtn = document.getElementById('tab-pix-btn');
+    const cardBtn = document.getElementById('tab-card-btn');
+    const boletoBtn = document.getElementById('tab-boleto-btn');
+    const ctaLabel = document.getElementById('cta-label');
+
+    const defaultClasses = "flex-1 py-2.5 px-2 rounded-lg bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-lg text-label-lg flex flex-col items-center justify-center transition-all";
+    const activeClasses = "flex-1 py-2.5 px-2 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg font-bold flex flex-col items-center justify-center transition-all shadow-[0_0_14px_rgba(245,196,81,0.35)]";
+
+    pixBtn.className = defaultClasses;
+    cardBtn.className = defaultClasses;
+    if (boletoBtn) boletoBtn.className = defaultClasses;
+
+    pixContent.classList.add('hidden');
+    cardContent.classList.add('hidden');
+    if (boletoContent) boletoContent.classList.add('hidden');
+
+    pixContent.classList.remove('flex');
+    cardContent.classList.remove('flex');
+    if (boletoContent) boletoContent.classList.remove('flex');
+
+    const totalFormatado = `R$ ${(pedido.total || 92.90).toFixed(2).replace('.', ',')}`;
+
+    if (tabKey === 'pix') {
+      pixBtn.className = activeClasses;
+      pixContent.classList.remove('hidden');
+      pixContent.classList.add('flex');
+      ctaLabel.textContent = "Já Efetuei o Pagamento PIX";
+    } else if (tabKey === 'card') {
+      cardBtn.className = activeClasses;
+      cardContent.classList.remove('hidden');
+      cardContent.classList.add('flex');
+      ctaLabel.textContent = `Pagar ${totalFormatado} no Cartão (Até 6x)`;
+    } else if (tabKey === 'boleto') {
+      if (boletoBtn) boletoBtn.className = activeClasses;
+      if (boletoContent) {
+        boletoContent.classList.remove('hidden');
+        boletoContent.classList.add('flex');
+      }
+      ctaLabel.textContent = "Gerar Boleto Sagrado";
+    }
+  }
+
+  function copyPixCode() {
+    const input = document.getElementById('pix-code-input');
+    const toast = document.getElementById('copy-toast');
+    const copyText = document.getElementById('copy-text');
+    const copyIcon = document.getElementById('copy-icon');
+
+    navigator.clipboard.writeText(input.value).then(() => {
+      copyText.textContent = "Copiado!";
+      copyIcon.textContent = "done";
+      toast.classList.remove('hidden');
+
+      setTimeout(() => {
+        copyText.textContent = "Copiar";
+        copyIcon.textContent = "content_copy";
+        toast.classList.add('hidden');
+      }, 3500);
+    });
+  }
+
+  async function confirmPaymentAction() {
+    const btn = document.getElementById('main-cta-btn');
+
+    if (currentTab === 'card') {
+      btn.innerHTML = `<span class="material-symbols-outlined text-[20px] animate-spin">cyclone</span> Conectando ao Mercado Pago Seguro...`;
+      btn.disabled = true;
+
+      try {
+        const select = document.querySelector('#content-card select');
+        const parcelas = select ? select.value : 3;
+
+        const res = await fetch('/api/criar-preferencia-mp', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            titulo: pedido.placaSelecionada || 'Placa Radiestésica Sagrada',
+            valor: pedido.total || 92.90,
+            email: 'cliente@geometriasagrada.com.br',
+            nome: (pedido.testemunho && pedido.testemunho.nome) || 'Cliente Geometria Sagrada',
+            pedidoId: pedidoId,
+            parcelas: parcelas
+          })
+        });
+
+        const data = await res.json();
+        if (data.init_point) {
+          window.location.href = data.init_point;
+          return;
+        }
+      } catch (err) {
+        console.error('Erro ao chamar preferência de cartão:', err);
+      }
+    }
+
+    // Se estiver no PIX ou clique manual
+    btn.innerHTML = `<span class="material-symbols-outlined text-[20px] animate-spin">cyclone</span> Verificando com Banco Central...`;
+    btn.disabled = true;
+
+    setTimeout(() => {
+      exibirSucesso();
+    }, 2000);
+  }
+
+  function exibirSucesso() {
+    if (pollInterval) clearInterval(pollInterval);
+
+    const mainContainer = document.querySelector('main');
+    const isDigital = pedido.isDigital || (pedido.material && pedido.material.toLowerCase().includes('digital')) || (pedido.placaSelecionada && pedido.placaSelecionada.toLowerCase().includes('ebook'));
+
+    mainContainer.innerHTML = `
+      <div class="max-w-2xl mx-auto px-4 py-12 text-center">
+        <div class="w-20 h-20 rounded-full bg-emerald-500/20 text-emerald-400 border-2 border-emerald-500 mx-auto flex items-center justify-center text-4xl mb-6 shadow-[0_0_30px_rgba(52,211,153,0.4)] animate-bounce">
+          ✓
+        </div>
+
+        <span class="px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-bold uppercase tracking-wider">
+          Pagamento Aprovado com Êxito!
+        </span>
+
+        <h1 class="font-cinzel text-3xl font-bold text-white mt-4 mb-2">
+          Consagração Sintonizada
+        </h1>
+
+        <p class="text-slate-300 text-sm max-w-md mx-auto mb-8 leading-relaxed">
+          Pedido <strong>#${pedidoId}</strong> confirmado. A ressonância do testemunho e o alinhamento foram registrados no campo magnético.
+        </p>
+
+        ${isDigital ? `
+          <!-- CARD DE DOWNLOAD IMEDIATO (DIGITAL / E-BOOK) -->
+          <div class="bg-surface-container-high/90 p-6 rounded-2xl border border-gold-500/40 text-left shadow-2xl mb-6">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-3xl">📥</span>
+              <div>
+                <h3 class="font-cinzel text-lg font-bold text-gold-400">Seu Material Digital Está Liberado!</h3>
+                <p class="text-xs text-slate-300">Acesso imediato ao PDF em alta resolução + Audioguia oficial.</p>
+              </div>
+            </div>
+
+            <div class="space-y-3">
+              <a href="https://notebook.google.com/notebook/6331fb82-2bc7-444f-84be-b0c50fdb9aa8" target="_blank" class="w-full py-3.5 px-4 rounded-xl bg-gradient-to-r from-gold-600 via-gold-500 to-gold-400 text-cosmic-950 font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 hover:brightness-110 shadow-lg">
+                <span class="material-symbols-outlined text-[18px]">download</span>
+                <span>Baixar E-book Oficial & Audioguia Completo</span>
+              </a>
+
+              <a href="index.html" class="w-full py-3 px-4 rounded-xl bg-cosmic-950 border border-slate-800 text-slate-300 font-semibold text-xs flex items-center justify-center gap-2 hover:bg-cosmic-900">
+                Voltar à Página Inicial
+              </a>
+            </div>
+          </div>
+        ` : `
+          <!-- CARD DE OFICINA & EXPEDIÇÃO (PVC / COBRE) -->
+          <div class="bg-surface-container-high/90 p-6 rounded-2xl border border-gold-500/40 text-left shadow-2xl mb-6">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-3xl">🛡️</span>
+              <div>
+                <h3 class="font-cinzel text-lg font-bold text-gold-400">Placa em Produção e Calibragem</h3>
+                <p class="text-xs text-slate-300">Oficina Técnica em Mogi Guaçu / SP (CEP 13.843-186)</p>
+              </div>
+            </div>
+
+            <div class="bg-surface-container-lowest p-3.5 rounded-xl text-xs space-y-1.5 mb-5 text-slate-300">
+              <p><strong>Item:</strong> ${pedido.placaSelecionada || 'Placa Sob Medida'}</p>
+              <p><strong>Material:</strong> ${pedido.material || 'PVC 1mm Emissivo'}</p>
+              <p><strong>Testemunho Vinculado:</strong> ${(pedido.testemunho && pedido.testemunho.nome) || 'Consulente'}</p>
+              <p><strong>Bônus Ativado:</strong> E-book Completo + Áudio liberados!</p>
+            </div>
+
+            <div class="space-y-3">
+              <a href="https://wa.me/5519998610145?text=Ol%C3%A1%20Vitor!%20Acabei%20de%20efetuar%20o%20pagamento%20do%20pedido%20%23${pedidoId}%20da%20minha%20Placa%20Radiest%C3%A9sica.%20Gostaria%20de%20acompanhar%20a%20consagra%C3%A7%C3%A3o!" target="_blank" class="w-full py-3.5 px-4 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-cosmic-950 font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg">
+                <span>📲 Acompanhar Consagração no WhatsApp</span>
+              </a>
+
+              <a href="index.html" class="w-full py-3 px-4 rounded-xl bg-cosmic-950 border border-slate-800 text-slate-300 font-semibold text-xs flex items-center justify-center gap-2 hover:bg-cosmic-900">
+                Voltar à Loja
+              </a>
+            </div>
+          </div>
+        `}
+      </div>
+    `;
+  }
+
+  // Inicialização
+  inicializarTela();
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface-container-lowest/85 backdrop-blur-2xl shadow-[0_-8px_32px_rgba(10,8,25,0.7)]"><div class="flex justify-around items-center h-20 px-space-xs max-w-container-max mx-auto"><a class="flex flex-col items-center justify-center gap-space-2xs w-20 h-14 text-on-surface-variant hover:text-on-surface transition-all active:scale-95" href="index.html"><span class="material-symbols-outlined text-[22px] transition-transform">auto_awesome</span><span class="font-label-sm text-label-sm text-center leading-none tracking-tight">Início</span></a><a class="flex flex-col items-center justify-center gap-space-2xs w-20 h-14 text-on-surface-variant hover:text-on-surface transition-all active:scale-95" href="personalizar.html"><span class="material-symbols-outlined text-[22px] transition-transform">magic_button</span><span class="font-label-sm text-label-sm text-center leading-none tracking-tight">Personalizar</span></a><a class="flex flex-col items-center justify-center gap-space-2xs w-20 h-14 text-on-surface-variant hover:text-on-surface transition-all active:scale-95" href="carrinho.html"><span class="material-symbols-outlined text-[22px] transition-transform">local_mall</span><span class="font-label-sm text-label-sm text-center leading-none tracking-tight">Sacola</span></a><a class="flex flex-col items-center justify-center gap-space-2xs w-20 h-14 text-primary font-semibold transition-all active:scale-95" href="pagamento.html"><span class="material-symbols-outlined text-[22px] transition-transform text-primary drop-shadow-[0_0_10px_rgba(245,196,81,0.5)]">radiology</span><span class="font-label-sm text-label-sm text-center leading-none tracking-tight">Checkout</span></a></div></nav></body></html>

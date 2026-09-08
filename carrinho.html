@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sacola Sagrada & Frete Regional | Geometria Sagrada</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: { 300: '#fae29c', 400: '#f7d370', 500: '#f5c451', 600: '#d9a632', 700: '#b0811e' },
+            cosmic: { 950: '#0a0815', 900: '#131123', 850: '#1a172e', 800: '#231f3d', 700: '#342e59' }
+          },
+          fontFamily: {
+            cinzel: ['Cinzel', 'serif'],
+            playfair: ['Playfair Display', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background-color: #0d0b1a; color: #e5e3f1; font-family: 'Plus Jakarta Sans', sans-serif; }
+    .cosmic-card {
+      background: linear-gradient(180deg, rgba(26, 23, 46, 0.85) 0%, rgba(19, 17, 35, 0.95) 100%);
+      border: 1px solid rgba(245, 196, 81, 0.2);
+      backdrop-filter: blur(12px);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col pb-28">
+
+  <!-- CABEÇALHO -->
+  <header class="sticky top-0 z-50 bg-cosmic-950/90 backdrop-blur-md border-b border-gold-500/20">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full border border-gold-500/40 bg-cosmic-900 flex items-center justify-center text-gold-500">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/></svg>
+        </div>
+        <div>
+          <span class="block font-cinzel text-lg tracking-wider text-gold-400 font-bold">GEOMETRIA SAGRADA</span>
+          <span class="block text-[10px] tracking-widest text-slate-400 uppercase">Cálculo de Frete & Sacola</span>
+        </div>
+      </a>
+      <a href="personalizar.html" class="text-xs text-gold-400 hover:text-gold-300">← Voltar ao Personalizador</a>
+    </div>
+  </header>
+
+  <!-- FLUXO / PROGRESSO -->
+  <div class="max-w-5xl mx-auto px-4 py-4 w-full">
+    <div class="grid grid-cols-4 gap-2 text-center text-[11px] font-medium">
+      <a href="personalizar.html" class="p-2 rounded-xl bg-cosmic-900 border border-slate-800 text-slate-400">1. Matriz Fixo + 13</a>
+      <a href="personalizar.html" class="p-2 rounded-xl bg-cosmic-900 border border-slate-800 text-slate-400">2. Testemunho</a>
+      <div class="p-2 rounded-xl bg-gold-500/20 border border-gold-500 text-gold-400 font-bold">3. Sacola / Frete</div>
+      <div class="p-2 rounded-xl bg-cosmic-900 border border-slate-800 text-slate-400">4. Pagamento PIX</div>
+    </div>
+  </div>
+
+  <main class="max-w-5xl mx-auto px-4 py-6 grid grid-cols-1 lg:grid-cols-12 gap-8 w-full">
+
+    <!-- RESUMO DO ITEM PERSONALIZADO -->
+    <div class="lg:col-span-7 space-y-6">
+
+      <div class="cosmic-card p-6 rounded-2xl">
+        <h2 class="font-cinzel text-lg font-bold text-white mb-4 flex items-center justify-between">
+          <span>Item Personalizado</span>
+          <span class="text-xs text-gold-400 font-mono">1 unidade</span>
+        </h2>
+
+        <div class="p-4 rounded-xl bg-cosmic-950 border border-gold-500/25 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-gold-400 text-base">✦</span>
+              <h3 id="item-titulo" class="font-playfair text-base font-bold text-white">Placa Quântica Sob Medida (Decágono Fixo + Sinergias)</h3>
+            </div>
+            <div class="mt-2 space-y-1 text-xs text-slate-300">
+              <p><strong>Núcleo Central:</strong> Decágono Duplo (Fixo / Ativação)</p>
+              <p><strong>Geometrias Adicionais:</strong> <span id="item-adicionais" class="text-gold-300">Turbilhão Prosperador, SCAP Compensador</span></p>
+              <p><strong>Testemunho Vinculado:</strong> <span id="item-testemunho" class="text-slate-200">Juliana Silveira Santos</span></p>
+            </div>
+          </div>
+          <div class="text-right">
+            <span id="item-preco" class="font-cinzel text-xl font-bold text-gold-400">R$ 68,00</span>
+            <span id="item-material" class="text-[10px] text-slate-400 block">PVC 1mm Emissivo</span>
+          </div>
+        </div>
+
+        <!-- LAUDO VIBRACIONAL VINCULADO -->
+        <div class="mt-4 p-3.5 rounded-xl bg-cosmic-950/60 border border-slate-800 text-xs">
+          <span class="text-[10px] text-gold-400 uppercase font-semibold block mb-1">Laudo Vibracional Gravado:</span>
+          <p id="item-laudo" class="text-slate-300 text-[11px] font-mono leading-relaxed line-clamp-3">
+            O Decágono central ancora e limpa o testemunho de Juliana Silveira Santos com sinergia para prosperidade e blindagem telúrica.
+          </p>
+        </div>
+      </div>
+
+      <!-- CÁLCULO DE FRETE REGIONAL (MOGI GUAÇU - CEP 13.843-186) -->
+      <div class="cosmic-card p-6 rounded-2xl">
+        <div class="flex items-center justify-between mb-3">
+          <h2 class="font-cinzel text-lg font-bold text-gold-400">Cálculo de Frete Regional</h2>
+          <span class="text-[10px] px-2 py-0.5 rounded bg-cosmic-800 text-slate-300">Origem: Mogi Guaçu / SP (13.843-186)</span>
+        </div>
+        <p class="text-xs text-slate-300 mb-4 leading-relaxed">
+          As placas são confeccionadas e calibradas a 0° Norte na oficina de Mogi Guaçu (SP). Informe o seu CEP para calcular a taxa de envio:
+        </p>
+
+        <div class="flex gap-3 mb-4">
+          <input type="text" id="input-cep" value="01310-100" placeholder="00000-000" class="w-48 px-3.5 py-2.5 rounded-xl bg-cosmic-950 border border-slate-800 text-white text-xs font-mono focus:border-gold-500 focus:outline-none">
+          <button onclick="calcularFrete()" class="px-5 py-2.5 rounded-xl bg-cosmic-800 hover:bg-cosmic-700 text-gold-400 border border-gold-500/30 font-semibold text-xs transition">
+            Recalcular Frete
+          </button>
+        </div>
+
+        <!-- OPÇÕES DE ENVIO -->
+        <div class="space-y-2.5" id="opcoes-frete">
+          <label class="p-3.5 rounded-xl border border-gold-500 bg-gold-500/10 flex items-center justify-between cursor-pointer">
+            <div class="flex items-center gap-3">
+              <input type="radio" name="frete" value="24.90" checked onchange="atualizarTotal()" class="text-gold-500 focus:ring-0">
+              <div>
+                <span class="text-xs font-bold text-white block">Sedex Expresso Consagrado</span>
+                <span class="text-[11px] text-slate-400">Entrega rápida em embalagem com blindagem energética</span>
+              </div>
+            </div>
+            <span class="font-cinzel text-sm font-bold text-gold-400">R$ 24,90</span>
+          </label>
+
+          <label class="p-3.5 rounded-xl border border-slate-800 bg-cosmic-950/60 flex items-center justify-between cursor-pointer hover:border-gold-500/40">
+            <div class="flex items-center gap-3">
+              <input type="radio" name="frete" value="18.50" onchange="atualizarTotal()" class="text-gold-500 focus:ring-0">
+              <div>
+                <span class="text-xs font-bold text-white block">PAC Econômico</span>
+                <span class="text-[11px] text-slate-400">Prazo padrão dos Correios</span>
+              </div>
+            </div>
+            <span class="font-cinzel text-sm font-bold text-slate-300">R$ 18,50</span>
+          </label>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RESUMO FINANCEIRO & CTA -->
+    <div class="lg:col-span-5 space-y-6">
+      <div class="cosmic-card p-6 rounded-2xl sticky top-20">
+        <h2 class="font-cinzel text-lg font-bold text-white mb-4">Resumo do Pedido</h2>
+
+        <div class="space-y-3 text-xs border-b border-slate-800 pb-4">
+          <div class="flex justify-between">
+            <span id="resumo-label-item" class="text-slate-400">Placa Sob Medida:</span>
+            <span id="resumo-valor-placa" class="text-white font-medium">R$ 68,00</span>
+          </div>
+          <div class="flex justify-between" id="linha-consagracao-resumo" style="display:none;">
+            <span class="text-slate-400">Consagração & Alinhamento:</span>
+            <span id="resumo-valor-consagracao" class="text-white font-medium">R$ 0,00</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-slate-400" id="resumo-label-frete">Frete (Mogi Guaçu):</span>
+            <span id="resumo-frete" class="text-white font-medium">R$ 24,90</span>
+          </div>
+          <div class="flex justify-between text-emerald-400" id="linha-bonus-ebook">
+            <span>E-book Digital + Áudio Oficial:</span>
+            <span class="font-bold">Grátis (Bônus)</span>
+          </div>
+        </div>
+
+        <div class="py-4 border-b border-slate-800 flex justify-between items-baseline">
+          <span class="text-sm font-bold text-white">Investimento Total:</span>
+          <div class="text-right">
+            <span id="resumo-total" class="font-cinzel text-2xl font-bold text-gold-400">R$ 92,90</span>
+            <span id="resumo-pix-desconto" class="text-[10px] text-emerald-400 block font-medium">Ou R$ 88,25 no PIX (5% OFF)</span>
+            <span id="resumo-cartao-parcela" class="text-[10px] text-slate-400 block font-light">ou até 6x sem juros no cartão</span>
+          </div>
+        </div>
+
+        <div class="mt-6 space-y-3">
+          <button onclick="irParaPagamento()" class="w-full py-4 rounded-xl bg-gradient-to-r from-gold-600 via-gold-500 to-gold-400 text-cosmic-950 font-bold text-xs uppercase tracking-wider shadow-lg hover:brightness-110 transition flex items-center justify-center gap-2">
+            <span>Avançar para Pagamento (PIX ou Cartão)</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+          </button>
+
+          <p class="text-center text-[10px] text-slate-400 flex items-center justify-center gap-1.5">
+            <svg class="w-3.5 h-3.5 text-gold-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            <span>Ambiente seguro com emissão imediata e rastreamento.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    function carregarPedido() {
+      const salvo = localStorage.getItem('geometria_pedido_v2');
+      return salvo ? JSON.parse(salvo) : {
+        placaSelecionada: "Placa Quântica Sob Medida (PVC 1mm)",
+        nucleoFixo: "Decágono Duplo (Fixo / Ativação)",
+        geometriasAdicionais: ["Turbilhão Prosperador", "SCAP Compensador"],
+        testemunho: { nome: "Consulente Sagrado" },
+        material: "Placa PVC 1mm Gravada",
+        valorPlaca: 68.00,
+        valorConsagracao: 0.00,
+        consagracao: false,
+        frete: 24.90,
+        isDigital: false,
+        laudoIA: "O Decágono central ancora e limpa o testemunho com sinergia para prosperidade e blindagem telúrica."
+      };
+    }
+
+    let pedidoAtual = carregarPedido();
+
+    // Atualização visual com base no pedido
+    function renderizarCarrinho() {
+      if (pedidoAtual.placaSelecionada) {
+        document.getElementById('item-titulo').innerText = pedidoAtual.placaSelecionada;
+        document.getElementById('resumo-label-item').innerText = pedidoAtual.placaSelecionada.substring(0, 30) + '...:';
+      }
+      if (pedidoAtual.material) {
+        document.getElementById('item-material').innerText = pedidoAtual.material;
+      }
+      if (pedidoAtual.valorPlaca) {
+        const valStr = `R$ ${pedidoAtual.valorPlaca.toFixed(2).replace('.', ',')}`;
+        document.getElementById('item-preco').innerText = valStr;
+        document.getElementById('resumo-valor-placa').innerText = valStr;
+      }
+      if (pedidoAtual.geometriasAdicionais && pedidoAtual.geometriasAdicionais.length) {
+        document.getElementById('item-adicionais').innerText = pedidoAtual.geometriasAdicionais.join(', ');
+      }
+      if (pedidoAtual.testemunho && pedidoAtual.testemunho.nome) {
+        document.getElementById('item-testemunho').innerText = pedidoAtual.testemunho.nome;
+      }
+      if (pedidoAtual.laudoIA) {
+        document.getElementById('item-laudo').innerText = pedidoAtual.laudoIA;
+      }
+
+      // Consagração
+      if (pedidoAtual.consagracao && pedidoAtual.valorConsagracao > 0) {
+        document.getElementById('linha-consagracao-resumo').style.display = 'flex';
+        document.getElementById('resumo-valor-consagracao').innerText = `R$ ${pedidoAtual.valorConsagracao.toFixed(2).replace('.', ',')}`;
+      }
+
+      // Se for produto digital ou e-book, frete é zero
+      const isDigital = pedidoAtual.isDigital || (pedidoAtual.material && pedidoAtual.material.toLowerCase().includes('digital')) || (pedidoAtual.placaSelecionada && pedidoAtual.placaSelecionada.toLowerCase().includes('ebook'));
+      if (isDigital) {
+        pedidoAtual.frete = 0.00;
+        document.getElementById('resumo-label-frete').innerText = 'Envio Digital:';
+        document.getElementById('resumo-frete').innerHTML = '<span class="text-emerald-400 font-bold">Grátis (Download)</span>';
+        const cepBox = document.getElementById('input-cep');
+        if (cepBox) cepBox.closest('.cosmic-card').style.display = 'none';
+      }
+
+      atualizarTotal();
+    }
+
+    function atualizarTotal() {
+      const isDigital = pedidoAtual.isDigital || (pedidoAtual.material && pedidoAtual.material.toLowerCase().includes('digital')) || (pedidoAtual.placaSelecionada && pedidoAtual.placaSelecionada.toLowerCase().includes('ebook'));
+      let freteValor = 0.00;
+
+      if (!isDigital) {
+        const radios = document.getElementsByName('frete');
+        freteValor = 24.90;
+        for (let r of radios) {
+          if (r.checked) freteValor = parseFloat(r.value);
+        }
+        document.getElementById('resumo-frete').innerText = `R$ ${freteValor.toFixed(2).replace('.', ',')}`;
+      }
+
+      pedidoAtual.frete = freteValor;
+      const subtotal = (pedidoAtual.valorPlaca || 68.00) + (pedidoAtual.consagracao ? (pedidoAtual.valorConsagracao || 0) : 0);
+      const total = subtotal + freteValor;
+      const pixComDesconto = +(total * 0.95).toFixed(2);
+      const parcela = +(total / 6).toFixed(2);
+
+      pedidoAtual.total = total;
+      pedidoAtual.pixComDesconto = pixComDesconto;
+
+      document.getElementById('resumo-total').innerText = `R$ ${total.toFixed(2).replace('.', ',')}`;
+      document.getElementById('resumo-pix-desconto').innerText = `Ou R$ ${pixComDesconto.toFixed(2).replace('.', ',')} no PIX (5% OFF)`;
+      document.getElementById('resumo-cartao-parcela').innerText = `ou até 6x de R$ ${parcela.toFixed(2).replace('.', ',')} sem juros`;
+    }
+
+    function calcularFrete() {
+      const cep = document.getElementById('input-cep').value;
+      alert(`Frete recalculado com sucesso partindo da oficina de Mogi Guaçu (CEP 13.843-186) para o CEP ${cep}!`);
+    }
+
+    function irParaPagamento() {
+      atualizarTotal();
+      localStorage.setItem('geometria_pedido_v2', JSON.stringify(pedidoAtual));
+      window.location.href = 'pagamento.html';
+    }
+
+    renderizarCarrinho();
+  </script>
+</body>
+</html>
